@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package WordPress
- * @subpackage uolBase
+ * @subpackage ServicesUOL
  * @author     Jez Thompson <jthompson@lincoln.ac.uk>
  * @since 1.0
  * @version 1.0
@@ -26,7 +26,7 @@
 			the_content();
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'uolBase' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ServicesUOL' ),
 				'after'  => '</div>',
 			) );
 		?>
@@ -39,7 +39,7 @@
 					sprintf(
 						wp_kses(
 							/* translators: %s: Name of current post. Only visible to screen readers */
-							__( 'Edit <span class="screen-reader-text">%s</span>', 'uolBase' ),
+							__( 'Edit <span class="screen-reader-text">%s</span>', 'ServicesUOL' ),
 							array(
 								'span' => array(
 									'class' => array(),

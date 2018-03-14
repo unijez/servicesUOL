@@ -1,9 +1,9 @@
 <?php
 /**
- * uolBase: Load in scripts
+ * ServicesUOL: Load in scripts
  *
  * @package WordPress
- * @subpackage uolBase
+ * @subpackage ServicesUOL
  * @author     Jez Thompson <jthompson@lincoln.ac.uk>
  * @since 1.0
  * @version 1.0
@@ -14,7 +14,7 @@
 /**
  * Loads scripts, styles, and fonts on the front end.
  */
-function uolBase_scripts() {
+function ServicesUOL_scripts() {
 	
 	
 
@@ -41,4 +41,4 @@ function uolBase_scripts() {
 	
 	
 }
-add_action( 'wp_enqueue_scripts',    'uolBase_scripts');
+add_action( 'wp_enqueue_scripts',    'ServicesUOL_scripts');

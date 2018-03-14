@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
  * @package WordPress
- * @subpackage uolBase
+ * @subpackage ServicesUOL
  * @author     Jez Thompson <jthompson@lincoln.ac.uk>
  * @since 1.0
  * @version 1.0
@@ -23,7 +23,7 @@ get_header(); ?>
 					<h1 class="page-title">
 						<?php
 						/* translators: %s: search query. */
-						printf( esc_html__( 'Search Results for: %s', 'uolbase' ), '<span>' . get_search_query() . '</span>' );
+						printf( esc_html__( 'Search Results for: %s', 'ServicesUOL' ), '<span>' . get_search_query() . '</span>' );
 						?>
 					</h1>
 					

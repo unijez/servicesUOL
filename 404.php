@@ -5,7 +5,7 @@
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
  * @package WordPress
- * @subpackage uolBase
+ * @subpackage ServicesUOL
  * @author     Jez Thompson <jthompson@lincoln.ac.uk>
  * @since 1.0
  * @version 1.0
@@ -17,9 +17,9 @@ get_header(); ?>
 				
 				<div class="container-404">
 					
-							<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'uolBase' ); ?></h1>
+							<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'ServicesUOL' ); ?></h1>
 						
-							<p><?php esc_html_e( 'It looks like nothing was found at this location.', 'uolBase' ); ?></p>
+							<p><?php esc_html_e( 'It looks like nothing was found at this location.', 'ServicesUOL' ); ?></p>
 
 						
 				</div> <!-- 404-container -->

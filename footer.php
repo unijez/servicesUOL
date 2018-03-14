@@ -7,7 +7,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package WordPress
- * @subpackage uolBase
+ * @subpackage ServicesUOL
  * @author     Jez Thompson <jthompson@lincoln.ac.uk>
  * @since 1.0
  * @version 1.0
@@ -16,11 +16,11 @@
 ?>
 
 
-<?php uolBase_content_bottom(); ?>
+<?php ServicesUOL_content_bottom(); ?>
 	
 </div><!-- .sitebody-content -->
 
-<?php uolBase_content_after(); ?>
+<?php ServicesUOL_content_after(); ?>
 
 
 <footer class="site-footer">
