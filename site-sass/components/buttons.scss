@@ -1,0 +1,28 @@
+/*--------------------------------------------------------------
+# Button Control
+--------------------------------------------------------------*/
+.main-btn {
+  display: inline-block;
+  vertical-align: middle; 
+  font: inherit;
+  text-align: center;
+  margin: 0; 
+  cursor: pointer; 
+  padding: $mobile-side-pad;
+  border-radius: $global-border-radius;
+  @include vendor(transition, $global-transition);
+  
+  	
+  	@include hocus() {
+  	  text-decoration: none;
+  	}
+  	
+  	
+}
+
+.mobile-button{
+	/*@include flex-center;*/
+	width: 40px;
+	height: 40px;
+	background: red;
+}

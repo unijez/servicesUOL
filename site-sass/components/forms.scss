@@ -1,0 +1,101 @@
+/* ==========================================================================
+   #DEFAULT FORM LAYOUTS
+   ========================================================================== */
+		
+		/**
+		 * A basic form reset
+		 *
+		 */
+
+
+		label {
+			@include font-size(15px);
+
+			cursor:         pointer;
+		}
+
+			.label-checkbox,
+			.label-radio { font-size: 1.125rem; }
+
+		input { display: block; }
+
+		input[type="checkbox"],
+		input[type="radio"] { display: inline-block; }
+
+		input[type="number"],
+		input[type="date"],
+		input[type="datetime"],
+		input[type="datetime-local"],
+		input[type="email"],
+		input[type="month"],
+		input[type="password"],
+		input[type="search"],
+		input[type="tel"],
+		input[type="text"],
+		input[type="time"],
+		input[type="url"],
+		input[type="week"],
+		textarea,
+		select {
+			@include font-size(15px);;
+			border:     1px solid;
+			box-sizing: border-box;
+			@include vendor(border-radius, $small-border-radius);
+			border-color: grey;
+			background-color: white;
+			padding: 10px;
+			
+				@include mq(tablet){
+					padding: 13px;
+					
+				}
+		}
+
+		input[type="date"],
+		input[type="datetime"],
+		input[type="datetime-local"],
+		input[type="email"],
+		input[type="month"],
+		input[type="password"],
+		input[type="search"],
+		input[type="tel"],
+		input[type="text"],
+		input[type="time"],
+		input[type="url"],
+		input[type="week"],
+		textarea,
+		select { width: 100%; }
+
+		textarea {
+			min-height:  200px;
+		}
+		
+		
+		/**
+		 * Comment/Review Submit Button
+		 */	
+		
+		input[type="submit"],
+		input[type="reset"],
+		input[type="button"] {
+			width: 100%;
+			@include font-size(18px);
+			text-transform: uppercase;
+			background-color: red;
+			color: white;
+			line-height: 1;
+			border-radius: $medium-border-radius;
+/*			padding-top: $site-header-padding - 5px;
+			padding-bottom: $site-header-padding - 5px;*/
+			
+			@include hocus() {
+				background-color: $base-colour;
+				text-decoration: none;
+			}
+			
+			@include mq(tablet) {
+				/*width: 46.5%;*/
+			}
+		}
+		
+		

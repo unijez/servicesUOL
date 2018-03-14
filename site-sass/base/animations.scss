@@ -1,0 +1,12 @@
+/*--------------------------------------------------------------
+# Animation Control
+--------------------------------------------------------------*/
+$global-transition: all 450ms cubic-bezier(0.645, 0.045, 0.355, 1.000) !default;
+
+@mixin menu-animation{
+	@include vendor(transition, all 450ms cubic-bezier(0.645, 0.045, 0.355, 1.000) );
+}
+
+.animated {
+   @include menu-animation;
+}

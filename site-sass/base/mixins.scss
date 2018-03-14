@@ -1,0 +1,103 @@
+@mixin vendor($property, $value...){
+    -webkit-#{$property}:$value;
+    -moz-#{$property}:$value;
+    -ms-#{$property}:$value;
+    -o-#{$property}:$value;
+    #{$property}:$value;
+}
+
+@mixin clearfix($important: false) {
+
+  // Determine whether or not to make declarations important.
+  @if ($important == false) {
+    $important: null;
+  } @else {
+    $important: !important;
+  }
+
+  &:after {
+    content: "" $important;
+    display: table $important;
+    clear: both $important;
+  }
+
+}
+
+@mixin module-inner-wrap {
+  	@include clearfix();
+  	max-width: $global-site-width;
+	margin: auto;
+	position: relative;
+  
+  
+  @include mq(tablet) {
+  
+  }
+      
+  
+}
+
+.module-inner-wrap {
+	@include module-inner-wrap;
+}
+
+
+   
+@mixin font-weight($weight) {
+
+  @if ($weight == normal) {
+    font-weight: 400;
+  }
+
+  @elseif ($weight == bold) {
+    font-weight: 500;
+  }
+
+  @elseif ($weight == black) {
+    font-weight: 700;
+  }
+
+  @else {
+    @warn "#{$weight} is not a valid font-weight."
+  }
+
+}
+
+@mixin font-family($family) {
+
+  @if ($family == "sans-serif") {
+    font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+
+  @elseif ($family == "serif") {
+    font-family: Georgia, Times, 'Times New Roman', serif;
+  }
+
+  @else {
+    @warn "#{$family} is not a valid font-family."
+  }
+
+}
+
+
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+
+
+
+@mixin hocus() {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+
