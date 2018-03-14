@@ -36,26 +36,17 @@
 
 
 		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$ServicesUOL_description = get_bloginfo( 'description', 'display' );
-			if ( $ServicesUOL_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $ServicesUOL_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
+
+			<a href="http://www.lincoln.ac.uk/home/" rel="<?php bloginfo( 'name' ); ?>">
+				<img class="logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/uol_landscape.svg" alt="<?php bloginfo( 'name' ); ?> University Of Lincoln Logo">
+			</a>
+
+			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
-			
+
 		</nav><!-- #site-navigation -->
 
 

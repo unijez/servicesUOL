@@ -4,14 +4,35 @@
 
 
 	@include mq(desktop) {
-	
+
 	}
 
 	@include mq(wide) {
-		
+
 	}
 
 	@include mq(extraWide) {
-		
+
 	}
 
+	/*--------------------------------------------------------------
+	# Styles added by Tom
+	--------------------------------------------------------------*/
+.site-brading {
+}
+
+.logo {
+	width: 200px;
+	display: inline;
+	border: none;
+}
+
+.site-title {
+	display: inline;
+	padding-left: 200px;
+}
+
+.site-title a {
+	text-decoration: none;
+	color: black;
+}
