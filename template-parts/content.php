@@ -32,7 +32,7 @@
 
 	<div class="entry-content">
 		<?php
-			the_content(),get_the_title() ) );
+			the_content(); get_the_title() ;
 
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'uolBase' ),

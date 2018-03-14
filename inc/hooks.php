@@ -48,3 +48,24 @@ function uolBase_header_bottom() {
 	do_action( 'uolBase_header_bottom' );
 }
 
+
+/**
+ * Semantic <content> hooks
+ * Outside & inside main <content> element, top & bottom.
+ * 
+ */
+function uolBase_content_before() {
+	do_action( 'uolBase_content_before' );
+}
+
+function uolBase_content_after() {
+	do_action( 'uolBase_content_after' );
+}
+
+function uolBase_content_top() {
+	do_action( 'uolBase_content_top' );
+}
+
+function uolBase_content_bottom() {
+	do_action( 'uolBase_content_bottom' );
+}
