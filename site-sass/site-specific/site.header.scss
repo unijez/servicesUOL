@@ -18,21 +18,48 @@
 	/*--------------------------------------------------------------
 	# Styles added by Tom
 	--------------------------------------------------------------*/
-.site-brading {
+
+header {
+	border-top: 4px solid $uni-blue;
+	border-bottom: 2px solid $uni-blue;
+	padding: 0 40px;
+	display: flex;
+	justify-content: space-between;
+	height: 100px;
+}
+
+.site-branding {
+	width: 500px;
+	height: auto;
+	display: flex;
+}
+
+.logo_container {
+	align-self: center;
+}
+
+.site-title_container {
+	align-self: center;
 }
 
 .logo {
-	width: 200px;
+	width: 230px;
 	display: inline;
 	border: none;
 }
 
 .site-title {
-	display: inline;
-	padding-left: 200px;
+	font-family: Georgia;
+	display: inline-block;
+	margin-left: 40px;
+	margin-bottom: 0;
+	width: 200px;
+	line-height: 21px;
 }
 
 .site-title a {
 	text-decoration: none;
-	color: black;
+	color: $uni-blue;
+	font-size: 20px;
+	font-weight: 300;
 }

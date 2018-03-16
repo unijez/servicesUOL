@@ -37,15 +37,46 @@
 
 		<div class="site-branding">
 
-			<a href="http://www.lincoln.ac.uk/home/" rel="<?php bloginfo( 'name' ); ?>">
-				<img class="logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/uol_landscape.svg" alt="<?php bloginfo( 'name' ); ?> University Of Lincoln Logo">
-			</a>
+			<div class="logo_container">
+				<a href="http://www.lincoln.ac.uk/home/" rel="<?php bloginfo( 'name' ); ?>">
+					<img class="logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/uol_landscape.svg" alt="<?php bloginfo( 'name' ); ?> University Of Lincoln Logo">
+				</a>
+			</div>
 
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<div class="site-title_container">
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			</div>
 
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
+
+			<ul>
+							<?php
+							$defaults = array(
+								'theme_location'  => 'main',
+								'menu'            => '',
+								'container'       => '',
+								'container_class' => '',
+								'container_id'    => '',
+								'menu_class'      => 'menu',
+								'menu_id'         => '',
+								'echo'            => true,
+								'fallback_cb'     => 'wp_page_menu',
+								'before'          => '',
+								'after'           => '',
+								'link_before'     => '',
+								'link_after'      => '',
+								'items_wrap'      => '%3$s',
+								'depth'           => 0,
+								'walker'          => ''
+							);
+
+							wp_nav_menu( $defaults );
+							?>
+					</ul> <!-- collapse -->
+
+					<?php get_search_form() ?>
 
 		</nav><!-- #site-navigation -->
 
