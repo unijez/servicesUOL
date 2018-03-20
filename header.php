@@ -54,7 +54,7 @@
 			<ul>
 							<?php
 							$defaults = array(
-								'theme_location'  => 'main',
+								'theme_location'  => 'primary-menu',
 								'menu'            => '',
 								'container'       => '',
 								'container_class' => '',

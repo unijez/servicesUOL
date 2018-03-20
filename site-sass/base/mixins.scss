@@ -69,6 +69,10 @@
     font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 
+  @elseif ($family == "verdana") {
+    font-family: Verdana, Geneva, sans-serif;
+  }
+  
   @elseif ($family == "serif") {
     font-family: Georgia, Times, 'Times New Roman', serif;
   }

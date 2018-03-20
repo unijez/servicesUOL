@@ -64,3 +64,134 @@ nav ul li:hover > a{
   color: $dark-grey;
   font-size: 13px;
 }
+
+
+
+
+//
+// Primary Navigation Styles
+//
+
+
+
+
+
+.primary-menu li {
+	float: left;
+	margin: 0 10px 0 0;
+	position: relative;
+}
+
+.primary-menu > li:last-child { margin-right: 0; }
+
+.primary-menu a {
+	display: block;
+	padding: 13px 15px;
+	@include font-size(14px);
+	text-transform: uppercase;
+	color: $base-black;
+	@include font-family(verdana);
+	@include font-weight(black);
+	text-decoration: none;
+}
+
+.primary-menu > li > a { 
+	@include vendor(border-radius, $small-border-radius);
+}
+
+.primary-menu > .menu-item-has-children > a { padding-right: 33px; position: relative; }
+
+
+.primary-menu > .menu-item-has-children > a::after {
+	content: "";
+	display: block;
+	border: 5px solid transparent;
+	border-top-color: $base-black;
+	position: absolute;
+	z-index: 1001;
+	right: 16px;
+	top: 50%;
+	margin-top: -2px;
+}
+
+.primary-menu > li:hover > a { 
+	color: #FFF;
+	background: $uni-blue; 
+}
+
+.primary-menu > .has-children:hover > a::after,
+.primary-menu > .menu-item-has-children:hover > a::after { border-top-color: #fff; }
+
+
+
+/* Drop Down Styling */
+
+
+.primary-menu ul { 
+	position: absolute;
+	padding-top: 20px;
+	margin-left: -110px;
+	z-index: 150;
+	opacity: 0;
+	top: 45px;
+	left: -9999px;
+
+	@include vendor(transition, opacity 450ms cubic-bezier(0.645, 0.045, 0.355, 1.000), top 450ms cubic-bezier(0.645, 0.045, 0.355, 1.000) );
+}
+
+.primary-menu > ul { top: 30px; }
+
+.primary-menu ul:after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	border: 10px solid transparent;
+	border-bottom-color: #222;
+	left: 50%;
+	margin-left: -10px;
+	top: 1px;
+}
+
+.primary-menu > li:hover > ul { 
+	opacity: 1;
+	top: 40px; 
+	left: 50%;
+}
+
+.primary-menu ul li { 
+	margin: 0; 
+	float:none; 
+	display: block; 
+}
+
+.primary-menu ul a { 
+	padding: 20px;
+	width: 220px;
+	background: #222;
+	color: #FFF;
+	border-bottom: 0;
+	text-align: center;
+	letter-spacing: 0;
+	@include font-size(13px);
+	text-transform: none;
+}
+
+.primary-menu ul a:hover {
+	color: #FFF;
+	background: $uni-blue;
+}
+
+.primary-menu ul > li:first-child > a { 
+
+@include vendor(border-radius, $small-border-radius $small-border-radius 0 0);
+ }
+ 
+.primary-menu ul > li:last-child > a { 
+
+@include vendor(border-radius, 0 0 $small-border-radius $small-border-radius);
+
+}
+
+
+
