@@ -22,74 +22,74 @@ get_header(); ?>
 
 
 						<!--More Details https://codex.wordpress.org/Class_Reference/WP_Query-->
-			
 
-	 					<?php 
-	 			
+
+	 					<?php
+
 		 					$args = array(
-		 					
+
 		 						'post_type' => 'post',
-		 						'posts_per_page' => 3,
+		 						'posts_per_page' => 1,
 		 						'post__not_in' => get_option( 'sticky_posts' )
 		 					);
-		 					
-		 					
+
+
 		 					$home_featured_posts = new WP_Query( $args );
-		 					
-		 					if ( $home_featured_posts->have_posts() ) : 
-	 					
-	 					
+
+		 					if ( $home_featured_posts->have_posts() ) :
+
+
 	 					?>
-	 				
-	 									
-	 											
-	 							<?php while ( $home_featured_posts->have_posts() ) : $home_featured_posts->the_post() ?>	
-	 														
-	 														
+
+
+
+	 							<?php while ( $home_featured_posts->have_posts() ) : $home_featured_posts->the_post() ?>
+
+
 	 														<!--//All post content here...-->
-	 														
+
 	 													<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 	 																	<?php the_title(); ?></a>
-	 																	
-	 																	
-	 													
+
+
+
 	 							<?php endwhile ?>
-	 								
-	 							
-	 					
-	 					
+
+
+
+
 	 					<?php endif;  wp_reset_query(); ?>
-	 					
-	 					
-	 					
+
+
+
 	 					<!--Normal Default Page Loop-->
-	 					
+
 	 					<?php if ( have_posts() ) : ?>
-	 					
+
 	 					 	<?php while ( have_posts() ) : the_post(); ?>
-	 					
-	 												
+
+
 	 								<?php get_template_part( 'template-parts/content', 'page' ); ?>
-	 												
-	 					
+
+
 	 								<?php if ( comments_open() || get_comments_number() ) : ?>
-	 					
-	 					
+
+
 	 									<div class="comments-container">
-	 					
+
 	 										 <?php  comments_template(); ?>
-	 					
+
 	 									</div> <!-- comments-container -->
-	 														
-	 					
+
+
 	 								 <?php endif; ?>
-	 												  
-	 					
+
+
 	 					 	<?php endwhile; ?>
-	 					 						
-	 					
+
+
 	 					<?php endif;  wp_reset_query(); ?>
-	 					
+
 
 
 	</main><!-- #main -->
