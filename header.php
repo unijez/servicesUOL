@@ -48,11 +48,11 @@
 			</div>
 
 		</div><!-- .site-branding -->
-		
+
 		<nav id="site-navigation" class="main-navigation">
-			
+
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'schoolsUOL' ); ?></button>
-			
+
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'primary-menu',
@@ -62,12 +62,12 @@
 				'menu_class'      => 'primary-menu'
 			) );
 			?>
-			
+
 			<?php get_search_form() ?>
-			
+
 		</nav><!-- #site-navigation -->
-		
-		
+
+
 
 
 		<?php ServicesUOL_header_bottom(); ?>

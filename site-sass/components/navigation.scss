@@ -2,50 +2,61 @@
    #NAVIGATION
    ========================================================================== */
 
-nav {
-  width: 800px;
+.main-navigation {
+  width: 1000px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  font-family: Helvetica;
-  float: right;
 }
 
-
-nav ul {
+.primary-menu {
   align-self: center;
   margin: 0;
-  height: auto;
 }
 
-nav ul li {
-  display: inline-block;
-  padding: 8px 13px;
-  margin: 0 8px;
+.primary-menu li {
+	float: left;
+	margin: 0 10px 0 0;
+	position: relative;
 }
 
-nav ul li:hover {
-  background-color: $uni-blue;
-}
+.primary-menu > li:last-child { margin-right: 10px; }
 
-nav ul li a {
-  text-decoration: none;
-  color: $dark-grey;
-  display: inline;
+.primary-menu a {
+	display: block;
+	padding: 11px 15px;
+	text-decoration: none;
+  font-family: Helvetica;
   font-size: 13px;
+  color: $dark-grey;
   font-weight: 400;
   letter-spacing: .03em;
 }
 
-nav ul li:hover > a{
-  color: #ffffff;
+.primary-menu > .menu-item-has-children > a { padding-right: 33px; position: relative; }
+
+
+.primary-menu > .menu-item-has-children > a::after {
+	content: "";
+	display: block;
+	border: 5px solid transparent;
+	border-top-color: $dark-grey;
+	position: absolute;
+	z-index: 1001;
+	right: 16px;
+	top: 50%;
+	margin-top: -2px;
 }
 
-.current-menu-item {
-  border-bottom: 2px solid $dark-grey;
+.primary-menu > li:hover > a {
+	color: #FFF;
+	background: $uni-blue;
 }
 
-// Search button
+.primary-menu > .has-children:hover > a::after,
+.primary-menu > .menu-item-has-children:hover > a::after { border-top-color: #fff; }
+
+/* Search */
 
 .site-header__search--form {
   display: flex;
@@ -54,6 +65,7 @@ nav ul li:hover > a{
 .search-container {
  align-self: center;
  width: 27px;
+ display: inline;
 }
 
 .search-container button {
@@ -67,68 +79,9 @@ nav ul li:hover > a{
 }
 
 
-
-
-//
-// Primary Navigation Styles
-//
-
-
-
-
-
-.primary-menu li {
-	float: left;
-	margin: 0 10px 0 0;
-	position: relative;
-}
-
-.primary-menu > li:last-child { margin-right: 0; }
-
-.primary-menu a {
-	display: block;
-	padding: 13px 15px;
-	@include font-size(14px);
-	text-transform: uppercase;
-	color: $base-black;
-	@include font-family(verdana);
-	@include font-weight(black);
-	text-decoration: none;
-}
-
-.primary-menu > li > a { 
-	@include vendor(border-radius, $small-border-radius);
-}
-
-.primary-menu > .menu-item-has-children > a { padding-right: 33px; position: relative; }
-
-
-.primary-menu > .menu-item-has-children > a::after {
-	content: "";
-	display: block;
-	border: 5px solid transparent;
-	border-top-color: $base-black;
-	position: absolute;
-	z-index: 1001;
-	right: 16px;
-	top: 50%;
-	margin-top: -2px;
-}
-
-.primary-menu > li:hover > a { 
-	color: #FFF;
-	background: $uni-blue; 
-}
-
-.primary-menu > .has-children:hover > a::after,
-.primary-menu > .menu-item-has-children:hover > a::after { border-top-color: #fff; }
-
-
-
 /* Drop Down Styling */
 
-
-.primary-menu ul { 
+.primary-menu ul {
 	position: absolute;
 	padding-top: 20px;
 	margin-left: -110px;
@@ -148,34 +101,35 @@ nav ul li:hover > a{
 	position: absolute;
 	top: 0;
 	border: 10px solid transparent;
-	border-bottom-color: #222;
+	border-bottom-color: $dark-grey;
 	left: 50%;
 	margin-left: -10px;
-	top: 1px;
 }
 
-.primary-menu > li:hover > ul { 
+.primary-menu > li:hover > ul {
 	opacity: 1;
-	top: 40px; 
+	top: 37px;
 	left: 50%;
 }
 
-.primary-menu ul li { 
-	margin: 0; 
-	float:none; 
-	display: block; 
+.primary-menu ul li {
+	margin: 0;
+	float:none;
+	display: block;
 }
 
-.primary-menu ul a { 
+.primary-menu ul a {
 	padding: 20px;
 	width: 220px;
-	background: #222;
+	background: $dark-grey;
 	color: #FFF;
 	border-bottom: 0;
 	text-align: center;
 	letter-spacing: 0;
 	@include font-size(13px);
 	text-transform: none;
+  font-weight: 400;
+  letter-spacing: .03em;
 }
 
 .primary-menu ul a:hover {
@@ -183,16 +137,6 @@ nav ul li:hover > a{
 	background: $uni-blue;
 }
 
-.primary-menu ul > li:first-child > a { 
-
-@include vendor(border-radius, $small-border-radius $small-border-radius 0 0);
- }
- 
-.primary-menu ul > li:last-child > a { 
-
-@include vendor(border-radius, 0 0 $small-border-radius $small-border-radius);
-
+.menu-toggle {
+  visibility: hidden;
 }
-
-
-
