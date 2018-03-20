@@ -48,37 +48,26 @@
 			</div>
 
 		</div><!-- .site-branding -->
-
+		
 		<nav id="site-navigation" class="main-navigation">
-
-			<ul>
-							<?php
-							$defaults = array(
-								'theme_location'  => 'primary-menu',
-								'menu'            => '',
-								'container'       => '',
-								'container_class' => '',
-								'container_id'    => '',
-								'menu_class'      => 'menu',
-								'menu_id'         => '',
-								'echo'            => true,
-								'fallback_cb'     => 'wp_page_menu',
-								'before'          => '',
-								'after'           => '',
-								'link_before'     => '',
-								'link_after'      => '',
-								'items_wrap'      => '%3$s',
-								'depth'           => 0,
-								'walker'          => ''
-							);
-
-							wp_nav_menu( $defaults );
-							?>
-					</ul> <!-- collapse -->
-
-					<?php get_search_form() ?>
-
+			
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'schoolsUOL' ); ?></button>
+			
+			<?php
+			wp_nav_menu( array(
+				'theme_location' => 'primary-menu',
+				'menu'            => '',
+				'container'       => '',
+				'container_class' => '',
+				'menu_class'      => 'primary-menu'
+			) );
+			?>
+			
+			<?php get_search_form() ?>
+			
 		</nav><!-- #site-navigation -->
+		
+		
 
 
 		<?php ServicesUOL_header_bottom(); ?>
