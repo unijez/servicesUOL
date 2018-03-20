@@ -25,17 +25,19 @@ header {
 	padding: 0 40px;
 	display: flex;
 	justify-content: space-between;
-	height: 100px;
+	height: auto;
 }
 
 .site-branding {
 	width: 500px;
-	height: auto;
+	height: 100px;
 	display: flex;
+	float: left;
 }
 
 .logo_container {
 	align-self: center;
+	width: 230px;
 }
 
 .site-title_container {
