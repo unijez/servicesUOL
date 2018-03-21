@@ -20,6 +20,7 @@ get_header(); ?>
 
 	<main id="main" class="site-main">
 
+				<div class="content-container">
 
 						<!--More Details https://codex.wordpress.org/Class_Reference/WP_Query-->
 
@@ -29,7 +30,7 @@ get_header(); ?>
 		 					$args = array(
 
 		 						'post_type' => 'post',
-		 						'posts_per_page' => 1,
+		 						'posts_per_page' => 3,
 		 						'post__not_in' => get_option( 'sticky_posts' )
 		 					);
 
@@ -48,9 +49,7 @@ get_header(); ?>
 
 	 														<!--//All post content here...-->
 
-	 													<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-	 																	<?php the_title(); ?></a>
-
+	 													<?php get_template_part( 'template-parts/post-listing' ); ?>
 
 
 	 							<?php endwhile ?>
@@ -61,36 +60,7 @@ get_header(); ?>
 	 					<?php endif;  wp_reset_query(); ?>
 
 
-
-	 					<!--Normal Default Page Loop-->
-
-	 					<?php if ( have_posts() ) : ?>
-
-	 					 	<?php while ( have_posts() ) : the_post(); ?>
-
-
-	 								<?php get_template_part( 'template-parts/content', 'page' ); ?>
-
-
-	 								<?php if ( comments_open() || get_comments_number() ) : ?>
-
-
-	 									<div class="comments-container">
-
-	 										 <?php  comments_template(); ?>
-
-	 									</div> <!-- comments-container -->
-
-
-	 								 <?php endif; ?>
-
-
-	 					 	<?php endwhile; ?>
-
-
-	 					<?php endif;  wp_reset_query(); ?>
-
-
+				</div><!-- font-page_container -->
 
 	</main><!-- #main -->
 
