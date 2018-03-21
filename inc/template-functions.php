@@ -35,7 +35,7 @@ add_action( 'init', 'itsg_disable_comment_js' );
 
 // Edit length of excerpt
 function wpdocs_custom_excerpt_length( $length ) {
-    return 20;
+    return 30;
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
