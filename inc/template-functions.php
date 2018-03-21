@@ -46,6 +46,6 @@ add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
  * @return string (Maybe) modified "read more" excerpt string.
  */
 function wpdocs_excerpt_more( $more ) {
-  return '...';
+    return '...';
 }
 add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );

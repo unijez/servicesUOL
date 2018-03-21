@@ -22,8 +22,11 @@ get_header(); ?>
 
 				<div class="content-container">
 
-						<!--More Details https://codex.wordpress.org/Class_Reference/WP_Query-->
+					<h1 class="content-heading">The Lastest News</h1><i class="far fa-angle-down"></i>
 
+					<div class="news-wrapper">
+
+						<!--More Details https://codex.wordpress.org/Class_Reference/WP_Query-->
 
 	 					<?php
 
@@ -42,23 +45,21 @@ get_header(); ?>
 
 	 					?>
 
-
-
 	 							<?php while ( $home_featured_posts->have_posts() ) : $home_featured_posts->the_post() ?>
-
 
 	 														<!--//All post content here...-->
 
+
 	 													<?php get_template_part( 'template-parts/post-listing' ); ?>
+
 
 
 	 							<?php endwhile ?>
 
 
-
-
 	 					<?php endif;  wp_reset_query(); ?>
 
+					</div>
 
 				</div><!-- font-page_container -->
 
