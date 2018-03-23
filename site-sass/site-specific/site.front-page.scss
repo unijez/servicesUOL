@@ -36,6 +36,7 @@
   justify-content: flex-start;
   align-content: stretch;
   justify-content: space-between;
+  margin-bottom: 50px;
 }
 
 .item-text {
@@ -80,4 +81,11 @@
   line-height: 17px;
   color: $light-grey;
   font-family: Helvetica;
+}
+
+// Social Media
+
+.social-wrapper {
+  width: 100%;
+  height: auto;
 }

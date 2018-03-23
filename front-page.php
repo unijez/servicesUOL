@@ -61,6 +61,8 @@ get_header(); ?>
 
 					</div>
 
+					<h1 class="content-heading">Social Media</h1><i class="far fa-angle-down"></i>
+
 				</div><!-- font-page_container -->
 
 	</main><!-- #main -->
