@@ -59,9 +59,21 @@ get_header(); ?>
 
 	 					<?php endif;  wp_reset_query(); ?>
 
-					</div>
+					</div><!-- news-wrapper -->
 
 					<h1 class="content-heading">Social Media</h1><i class="far fa-angle-down"></i>
+
+					<div class="social-wrapper">
+
+						<div class="social-text">
+							<?php the_field( 'social_media_text_' ); ?>
+						</div>
+
+						<div class="social-icons">
+							<?php get_template_part( 'template-parts/site/social-media', 'icons' ); ?>
+						</div>
+
+					</div><!-- social-wrapper -->
 
 				</div><!-- font-page_container -->
 

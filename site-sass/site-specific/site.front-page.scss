@@ -6,6 +6,7 @@
   height: auto;
   margin: 0 auto;
   padding-top: 50px;
+  padding-bottom: 100px; // QUERY THIS!!!
 }
 
 // Headings
@@ -88,4 +89,34 @@
 .social-wrapper {
   width: 100%;
   height: auto;
+}
+
+.social-text {
+  width: 50%;
+  font-size: 16px;
+  line-height: 25px;
+  font-family: Helvetica;
+  color: $light-grey;
+  font-weight: 300;
+  float: left;
+}
+
+.social-icons .social {
+  width: 50%;
+  height: auto;
+  padding: 0 75px;
+  float: right;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+
+.social-icons ul {
+  margin-bottom: none;
+}
+
+.social-wrapper svg {
+  font-size: 45px;
+  color: $uni-blue;
 }
