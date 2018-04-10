@@ -28,7 +28,28 @@
 
 // About Home Page
 
+.about-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: flex-start;
+}
 
+.about-wrapper_text {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: flex-start;
+  width: 50%;
+}
+
+.about-wrapper_img {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: flex-start;
+  width: 50%;
+}
 
 // Extended Navigation
 

@@ -146,4 +146,3 @@ require get_template_directory() . '/inc/template-functions.php';
  * Implement ACF.
  */
 require get_template_directory() . '/inc/functions-acf.php';
-

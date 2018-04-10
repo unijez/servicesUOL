@@ -22,6 +22,24 @@ get_header(); ?>
 
 				<div class="content-container">
 
+
+
+					<div class="about-wrapper">
+
+						<div class="about-wrapper_text">
+							<h1 class="about-wrapper_heading">Welcome to the <?php bloginfo( 'name' ); ?> website</h1>
+							<?php the_excerpt( 143 );?>
+						</div>
+
+						<div class="about-wrapper_img">
+							<!-- IF STATEMENT NEEDED FOR ERROR -->
+							<?php the_post_thumbnail( $post = 143, 'small' ); ?>
+						</div>
+
+					</div><!-- about-wrapper -->
+
+
+
 					<div class="extended-navigation_wrapper">
 
 						<?php $extended_navigation = get_field( 'extended_navigation' ); ?>
@@ -43,16 +61,14 @@ get_header(); ?>
 					</div><!-- extended-navigation_wrapper -->
 
 
-					<h1 class="content-heading">The Latest News</h1><i class="far fa-angle-down"></i>
 
+					<h1 class="content-heading">The Latest News</h1><i class="far fa-angle-down"></i>
 					<div class="news-wrapper">
 
 						<!--More Details https://codex.wordpress.org/Class_Reference/WP_Query-->
 
 	 					<?php
-
 		 					$args = array(
-
 		 						'post_type' => 'post',
 		 						'posts_per_page' => 3,
 		 						'post__not_in' => get_option( 'sticky_posts' )
@@ -61,17 +77,11 @@ get_header(); ?>
 		 					$home_featured_posts = new WP_Query( $args );
 
 		 					if ( $home_featured_posts->have_posts() ) :
-
 	 					?>
-
 	 							<?php while ( $home_featured_posts->have_posts() ) : $home_featured_posts->the_post() ?>
-
 	 														<!--//All post content here...-->
-
 	 													<?php get_template_part( 'template-parts/post-listing' ); ?>
-
 	 							<?php endwhile ?>
-
 	 					<?php endif;  wp_reset_query(); ?>
 
 					</div><!-- news-wrapper -->
@@ -79,13 +89,11 @@ get_header(); ?>
 
 
 					<h1 class="content-heading">Social Media</h1><i class="far fa-angle-down"></i>
-
 					<div class="social-wrapper">
 
 						<div class="social-text">
 							<?php the_field( 'social_media_text_' ); ?>
 						</div>
-
 						<div class="social-icons">
 							<?php get_template_part( 'template-parts/site/social-media', 'icons' ); ?>
 						</div>
