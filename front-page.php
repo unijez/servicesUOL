@@ -28,13 +28,24 @@ get_header(); ?>
 
 						<div class="about-wrapper_text">
 							<h1 class="about-wrapper_heading">Welcome to the <?php bloginfo( 'name' ); ?> website</h1>
-							<?php the_excerpt( 143 );?>
-						</div>
+							<?php echo get_the_excerpt(); ?>
+
+							<?php
+    					query_posts("page_id=143");
+    						while ( have_posts() ) : the_post()
+							?>
+    					<?php the_excerpt(); ?>
+
+							<?php
+    						endwhile;
+    					wp_reset_query();
+							?>
+						</div><!-- about-wrapper_text -->
 
 						<div class="about-wrapper_img">
 							<!-- IF STATEMENT NEEDED FOR ERROR -->
 							<?php the_post_thumbnail( $post = 143, 'small' ); ?>
-						</div>
+						</div><!-- about-wrapper_img -->
 
 					</div><!-- about-wrapper -->
 
