@@ -26,6 +26,52 @@
   color: $uni-blue;
 }
 
+// About Home Page
+
+
+
+// Extended Navigation
+
+.extended-navigation_wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: flex-start;
+  padding: 30px 10px;
+}
+
+.extended-navigation_item {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: flex-start;
+  width: 33.333%;
+  padding: 20px 10px;
+}
+
+.extended-navigation_link {
+  font-family: Georgia;
+  color: $uni-blue;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.extended-navigation_link .fa-angle-right {
+  font-size: 15px;
+  margin-left: 8px;
+  margin-bottom: 1px;
+}
+
+.extended-navigation_description {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 17px;
+  color: $light-grey;
+  font-family: Helvetica;
+  padding-top: 10px;
+}
+
 // Latest News
 
 .news-wrapper {

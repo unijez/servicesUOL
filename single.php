@@ -20,9 +20,8 @@
 
  				<?php while ( have_posts() ) : the_post(); ?>
 
-							
 								<?php get_template_part( 'template-parts/content', get_post_type() ); ?>
-							
+
 
 				                <?php if ( comments_open() || get_comments_number() ) : ?>
 
@@ -34,10 +33,10 @@
 				                	</div> <!-- comments-container -->
 
 				              <?php endif; ?>
-							  
+
 
  					<?php endwhile; ?>
- 						
+
 
 			<?php endif;  wp_reset_query(); ?>
 

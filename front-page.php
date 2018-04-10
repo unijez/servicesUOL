@@ -22,7 +22,28 @@ get_header(); ?>
 
 				<div class="content-container">
 
-					<h1 class="content-heading">The Lastest News</h1><i class="far fa-angle-down"></i>
+					<div class="extended-navigation_wrapper">
+
+						<?php $extended_navigation = get_field( 'extended_navigation' ); ?>
+						<?php if ( $extended_navigation ): ?>
+							<?php foreach ( $extended_navigation as $post ):  ?>
+								<?php setup_postdata ( $post ); ?>
+
+								<div class="extended-navigation_item">
+									<a class="extended-navigation_link" href="<?php the_permalink(); ?>"><?php the_title(); ?><i class="far fa-angle-right"></i></a>
+									<div class="extended-navigation_description">
+										<?php the_field( 'postpage_description' ); ?>
+									</div>
+								</div><!-- extended-navigation_item -->
+
+							<?php endforeach; ?>
+							<?php wp_reset_postdata(); ?>
+						<?php endif; ?>
+
+					</div><!-- extended-navigation_wrapper -->
+
+
+					<h1 class="content-heading">The Latest News</h1><i class="far fa-angle-down"></i>
 
 					<div class="news-wrapper">
 
@@ -37,11 +58,9 @@ get_header(); ?>
 		 						'post__not_in' => get_option( 'sticky_posts' )
 		 					);
 
-
 		 					$home_featured_posts = new WP_Query( $args );
 
 		 					if ( $home_featured_posts->have_posts() ) :
-
 
 	 					?>
 
@@ -49,17 +68,15 @@ get_header(); ?>
 
 	 														<!--//All post content here...-->
 
-
 	 													<?php get_template_part( 'template-parts/post-listing' ); ?>
 
-
-
 	 							<?php endwhile ?>
-
 
 	 					<?php endif;  wp_reset_query(); ?>
 
 					</div><!-- news-wrapper -->
+
+
 
 					<h1 class="content-heading">Social Media</h1><i class="far fa-angle-down"></i>
 
@@ -75,7 +92,11 @@ get_header(); ?>
 
 					</div><!-- social-wrapper -->
 
+
+
 				</div><!-- font-page_container -->
+
+
 
 	</main><!-- #main -->
 
