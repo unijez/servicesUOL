@@ -27,19 +27,23 @@ get_header(); ?>
 					<div class="about-wrapper">
 
 						<div class="about-wrapper_text">
-							<h1 class="about-wrapper_heading">Welcome to the <?php bloginfo( 'name' ); ?> website</h1>
-							<?php echo get_the_excerpt(); ?>
+							<h1 class="about-wrapper_heading">Welcome <br>to the <?php bloginfo( 'name' ); ?> website</h1>
+							<div class="about-wrapper_excerpt">
+								<?php echo get_the_excerpt(); ?>
 
-							<?php
-    					query_posts("page_id=143");
-    						while ( have_posts() ) : the_post()
-							?>
-    					<?php the_excerpt(); ?>
+								<?php
+	    					query_posts("page_id=143");
+	    						while ( have_posts() ) : the_post()
+								?>
+	    					<?php the_excerpt(); ?>
 
-							<?php
-    						endwhile;
-    					wp_reset_query();
+								<?php
+	    						endwhile;
+	    					wp_reset_query();
 							?>
+							</div>
+							<h3>Want to know more?</h3>
+							<p class="about-link">Feel free to head over to <a href="<?php the_permalink( $post = 143 ); ?>">About Us</a>.</p>
 						</div><!-- about-wrapper_text -->
 
 						<div class="about-wrapper_img">
