@@ -22,7 +22,7 @@
 	    <a href="<?php the_permalink();?>">
 	    		<?php default_image('medium'); ?>
 	    </a>
-	</div>
+		</div>
 
 		<?php the_excerpt();?>
 	</div> <!-- item-text -->
