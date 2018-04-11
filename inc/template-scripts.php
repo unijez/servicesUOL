@@ -21,6 +21,8 @@ function ServicesUOL_scripts() {
 	// Theme stylesheet.
 	wp_enqueue_style( 'global-style', get_stylesheet_directory_uri() . '/css/global.css' );
 
+	wp_enqueue_script( 'slick.min.js', get_template_directory_uri() . '/js/slick/slick.min.js', array('jquery'), null, null, true );
+
 //	//https://github.com/aFarkas/lazysizes
 	wp_enqueue_script( 'lazysizes', get_template_directory_uri() . '/js/lazysizes-umd.min.js', '4.0.1', null,  true );
 
@@ -29,8 +31,6 @@ function ServicesUOL_scripts() {
 
 
 	wp_enqueue_script( 'site-scripts', get_template_directory_uri() . '/js/site-wide-min.js', array('jquery'), null, true );
-
-	wp_enqueue_script( 'slick-scripts', get_template_directory_uri() . '/js/slick/slick.min.js', array('jquery'), null, true );
 //
 //
 //	wp_enqueue_style( 'global-style', get_stylesheet_directory_uri() . '/css/global.css' );

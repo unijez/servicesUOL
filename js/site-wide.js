@@ -1,42 +1,6 @@
 jQuery(document).ready(function($) {
 
-
-	 /************Mobile Menu************/
-
-	 	var menuButton = $('.nav-button');
-	 	var globalNav = $('.global-nav');
-		var body = $('html');
-		var overlay = $('.overlay');
-
-
-	 	function mobileMenuLaunch() {
-	 		menuButton.add(overlay).click( function(e) {
-	 			e.preventDefault();
-	 			e.stopPropagation();
-	 			e.stopImmediatePropagation();
-	 	        var status = globalNav.hasClass('menu-active');
-
-	 	      if(status){
-
-	 	        globalNav.removeClass('menu-active');
-	 	        menuButton.removeClass('button-active');
-				body.removeClass('stop-scroll');
-				overlay.removeClass('menuOpen');
-
-	 	      }else{
-	 	        globalNav.addClass('menu-active');
-	 	        menuButton.addClass('button-active');
-				body.addClass('stop-scroll');
-				overlay.addClass('menuOpen');
-
-	 	      }
-	 	  });
-	 	}
-
-	mobileMenuLaunch();
-
-
-//	Reading Time Plugin
+/*	Reading Time Plugin
 
 	var $article = $('.blog-article');
 
@@ -56,7 +20,7 @@ jQuery(document).ready(function($) {
 				$article.find('.reading-time').remove();
 			}
 		});
-
+*/
 
 
 //	Slider Plugin
@@ -70,17 +34,6 @@ jQuery(document).ready(function($) {
 	  autoplay: true,
 	  autoplaySpeed: 2500
 	});
-
-	/*$(document).ready(function(){
-		$('.hero-header').slick({
-			setting-name: autoplay,
-			slidesToShow: 3,
-			slidesToScroll: 1,
-			autoplay: true,
-			autoplaySpeed: 2000,
-		});
-	}); */
-
 
 //	Comment Tabs
 
