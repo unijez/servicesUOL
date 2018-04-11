@@ -50,14 +50,14 @@ get_header(); ?>
 					?>
 					<div class="overlay-slide item">
 						<div class="item-text">
-							<h5 class="brighter">
+							<h5 class="header-text-area">
 								<?php echo get_the_date(); ?>
 							</h5>
 							<a href="<?php the_permalink() ?>">
-								<h2><?php the_title(); ?></h2>
+								<h2 class="header-text-area"><?php the_title(); ?></h2>
 							</a>
-							<div class="readmore ">
-									<a class="animated" href="<?php the_permalink()?>">Read More</a>
+							<div>
+									<a href="<?php the_permalink()?>" class="header-text-area">Read More</a>
 							</div> <!-- author -->
 						</div>
 					</div>
