@@ -152,6 +152,11 @@
   color: $light-grey;
 }
 
+.item-text {
+  width: 270px;
+}
+
+
 .news-post-date {
   font-family: Helvetica;
   font-weight: 200;
@@ -161,6 +166,7 @@
 
 .post-title {
   margin: 10px 0;
+  min-height: 43px;
 }
 
 .post-title a {
@@ -172,12 +178,12 @@
 
 .item-text .post-img {
   margin-bottom: 10px;
-  max-height: 178px;
+  max-height: 180px;
   overflow: hidden;
 }
 
 .item-text .post-img img {
-  width: 100%;
+  width: 270px;
 }
 
 .item-text p {
