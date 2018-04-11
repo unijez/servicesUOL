@@ -1,0 +1,72 @@
+.slick-slide {
+  position: relative;
+  height: 700px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  .backup-slide {
+    width: 100%;
+    height: 100%;
+    background: -moz-linear-gradient(50% 100% 90deg, #002147 0%, #012349 42.73%, #062952 67.78%, #0d3260 88.2%, #143b6c 100%);
+    background: -webkit-linear-gradient(90deg, #002147 0%, #012349 42.73%, #062952 67.78%, #0d3260 88.2%, #143b6c 100%);
+    background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0, #002147), color-stop(0.4273, #012349), color-stop(0.6778, #062952), color-stop(0.882, #0d3260), color-stop(1, #143b6c));
+    background: -o-linear-gradient(90deg, #002147 0%, #012349 42.73%, #062952 67.78%, #0d3260 88.2%, #143b6c 100%);
+    background: -ms-linear-gradient(90deg, #002147 0%, #012349 42.73%, #062952 67.78%, #0d3260 88.2%, #143b6c 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#002147', endColorstr='#143B6C' ,GradientType=0)";
+    background: linear-gradient(0deg, #002147 0%, #012349 42.73%, #062952 67.78%, #0d3260 88.2%, #143b6c 100%);
+      background-position-x: 0%;
+      background-position-y: 0%;
+      background-size: auto auto;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#143B6C',endColorstr='#002147' , GradientType=0);
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .overlay-slide {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $uni-blue-heading;
+    z-index: 1;
+    position: absolute;
+
+    .readmore {
+      width: 30%;
+      margin: 0 auto;
+      padding: 10px;
+	  line-height: 30px;
+
+      p {
+        color: #fff;
+        margin: 0;
+      }
+
+      a {
+        width: auto;
+        border: 1px solid white;
+        border-radius: 2px;
+        margin: 30px auto;
+        display: inline-block;
+        padding: 13px 35px;
+        letter-spacing: 1px;
+        color: white;
+      }
+
+      a:hover {
+        border: 1px solid $main-text-grey;
+      	color: $related-container-color;
+      	background: rgba(#3e3e3e, 0.6);
+      }
+    }
+
+    .item-text {
+      margin: 0 auto;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
