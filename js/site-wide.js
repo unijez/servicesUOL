@@ -71,6 +71,15 @@ jQuery(document).ready(function($) {
 	  autoplaySpeed: 2500
 	});
 
+	/*$(document).ready(function(){
+		$('.hero-header').slick({
+			setting-name: autoplay,
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			autoplay: true,
+			autoplaySpeed: 2000,
+		});
+	}); */
 
 
 //	Comment Tabs

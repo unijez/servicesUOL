@@ -3,11 +3,8 @@
   $args = array(
 
       'post_type' => 'post',
-      'posts_per_page' => 4,
-      'meta_query' => array(
-                      array(
-      'compare' => 'EXISTS'
-      ),)
+      'posts_per_page' => 5
+
   );
 
   $home_work_posts = new WP_Query( $args );
@@ -18,39 +15,32 @@
 
     <?php while ( $home_work_posts->have_posts() ) : $home_work_posts->the_post() ?>
 
-      <div class="slick-slide heading-image" style="background-image: url(<?php echo header_post_image();?>)">
-        <?php get_image_result(header_post_image()); ?>
+      <div class="slick-slide">
+
         <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"> <?php the_title(); ?> </a>
 
         <?php if (has_post_thumbnail()) : ?>
 
           <?php
-            $imgdata = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID ), 'hero-header',false);
+            $imgdata = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID ), 'hero-header' );
 
             $imgwidth = $imgdata[1];
             $wanted_width = 1600;
           ?>
 
+          <?php if ( $imgwidth >= $wanted_width ) : ?>
+
+            <?php default_image('hero-header');?>
+
+          <?php else: ?>
+
+            <?php default_image('hero-header');?>
+
+          <?php endif; ?>
+
         <?php endif; ?>
 
-        <div class="overlay-slide item">
-            <div class="item-text">
-              <h5 class="brighter">
-                <?php $categories = get_the_category();
-                if ( ! empty( $categories ) ) {
-                  echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
-                }?>
-              </h5>
-              <a href="<?php the_permalink()?>">
-                <h2 class="esc"><?php the_title();?></h2>
-              </a>
-              <div class="readmore ">
-                  <a class="animated" href="<?php the_permalink()?>">Read More</a>
-                </p>
-							</div> <!-- author -->
-            </div> <!-- item-text -->
-          </div> <!-- post -->
-        </div> <!-- item -->
+      </div>    <!-- slick-slide -->
 
     <?php endwhile ?>
 
