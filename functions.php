@@ -42,6 +42,10 @@ if ( ! function_exists( 'ServicesUOL_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
+		/* image resizing */
+		add_image_size( 'post-intro-image', 450, 300, true );
+		add_image_size( 'hero-header', 1915, 630, array( 'left', 'top' )  ); // Hard Crop Mode
+
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'primary-menu' => esc_html__( 'Primary', 'ServicesUOL' ),
