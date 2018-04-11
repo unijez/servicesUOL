@@ -86,6 +86,8 @@
   flex: 0 1 auto;
   align-self: flex-start;
   width: 50%;
+  max-height: 550px;
+  overflow: hidden;
 }
 
 // Extended Navigation
@@ -168,8 +170,14 @@
   text-decoration: none;
 }
 
-.item-text img {
+.item-text .post-img {
   margin-bottom: 10px;
+  max-height: 178px;
+  overflow: hidden;
+}
+
+.item-text .post-img img {
+  width: 100%;
 }
 
 .item-text p {

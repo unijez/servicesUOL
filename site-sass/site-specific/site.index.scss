@@ -1,1 +1,50 @@
 
+.news-padding {
+  padding-top: 20px;
+}
+
+.news-container {
+  width: 100%;
+  background-color: $footer-middle-grey;
+  padding: 40px 0;
+  margin: 30px 0;
+}
+
+.news-post_wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  width: 900px;
+  margin: 0 auto;
+}
+
+.news-post_text {
+  width: 50%;
+  padding-right: 40px;
+  align-self: center;
+}
+
+.news-post_text h1 {
+  font-size: 38px;
+  overflow: hidden;
+}
+
+.news-post_text p {
+  font-size: 15px;
+  line-height: 25px;
+  font-family: Helvetica;
+  color: $light-grey;
+  font-weight: 300;
+  overflow: hidden;
+}
+
+.news-post_img {
+  order: 0;
+  align-self: auto;
+  width: 50%;
+  max-height: 300px;
+  overflow: hidden;
+  display: flex;
+}

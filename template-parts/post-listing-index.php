@@ -12,16 +12,24 @@
 
 <div class="news-post" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<div class="item-text">
+	<div class="news-container">
 
-    <i class="calendar-icon fal fa-calendar-alt"></i><time class="news-post-date date-published" datetime="<?php the_time('d/m/Y') ?>"><?php the_time('jS F, Y') ?></time>
+		<div class="news-post_wrapper">
 
-		<h3 class="post-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h3>
+			<div class="news-post_text">
+	    	<i class="calendar-icon fal fa-calendar-alt"></i><time class="news-post-date date-published" datetime="<?php the_time('d/m/Y') ?>"><?php the_time('F jS, Y') ?></time>
+				<h1 class="post-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h1>
+				<?php the_excerpt();?>
+			</div> <!-- news-post_text -->
 
-    <a href="<?php the_permalink();?>">
-    		<?php default_image('medium'); ?>
-    </a>
+			<div class="news-post_img">
+				<a href="<?php the_permalink();?>">
+		    		<?php default_image('large'); ?>
+		    </a>
+			</div> <!-- news-post_img -->
 
-		<?php the_excerpt();?>
-	</div> <!-- item-text -->
+		</div> <!-- news-post_wrapper -->
+
+	</div> <!-- news-container -->
+
 </div> <!-- post -->
