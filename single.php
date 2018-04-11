@@ -20,6 +20,8 @@
 
  				<?php while ( have_posts() ) : the_post(); ?>
 
+          <div class="content-container">
+
 								<?php get_template_part( 'template-parts/content', get_post_type() ); ?>
 
 
@@ -31,6 +33,8 @@
 					                  <?php  comments_template(); ?>
 
 				                	</div> <!-- comments-container -->
+
+          </div>
 
 				              <?php endif; ?>
 

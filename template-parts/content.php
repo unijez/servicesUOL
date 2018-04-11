@@ -14,21 +14,9 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header clear">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="page-title__inner">', '</h1>' );
-		else :
-			the_title( '<h2 class="page-title__inner"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
 
-		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php ServicesUOL_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php
-		endif; ?>
-	</header><!-- .entry-header -->
+		<i class="calendar-icon fal fa-calendar-alt"></i><time class="news-post-date date-published" datetime="<?php the_time('d/m/Y') ?>"><?php the_time('jS F, Y') ?></time>
+		<?php the_title( '<h1 class="page-title__inner">', '</h1>' ); ?>
 
 	<div class="entry-content">
 		<?php
