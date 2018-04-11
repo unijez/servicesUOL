@@ -95,7 +95,7 @@ get_header(); ?>
 	 					?>
 	 							<?php while ( $home_featured_posts->have_posts() ) : $home_featured_posts->the_post() ?>
 	 														<!--//All post content here...-->
-	 													<?php get_template_part( 'template-parts/post-listing' ); ?>
+	 													<?php get_template_part( 'template-parts/post-listing-front-page' ); ?>
 	 							<?php endwhile ?>
 	 					<?php endif;  wp_reset_query(); ?>
 

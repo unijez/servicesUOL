@@ -20,12 +20,35 @@ get_header(); ?>
 
 	<main id="main" class="site-main">
 
-		<div class="content-container">
+		<?php if ( have_posts() ) : ?>
 
-		</div>
+			<div class="content-container">
 
+				<div class="row site-module-inner">
 
+					<?php while ( have_posts() ) : the_post(); ?>
 
+						<div class="item">
+
+								<?php get_template_part( 'template-parts/post-listing-index' ); ?>
+
+						</div> <!-- item -->
+
+						<?php endwhile; ?>
+
+					</div> <!-- row -->
+
+				</div> <!-- container -->
+
+				<?php the_posts_pagination( array(
+					'mid_size' => 1,
+					'prev_text' => __( 'Prev', 'collegeBlog' ),
+					'next_text' => __( 'Next', 'collegeBlog' ),
+				) ); ?>
+
+				<?php endif;  wp_reset_query(); ?>
+
+			</div><!-- content-container -->
 
 	</main><!-- #main -->
 
