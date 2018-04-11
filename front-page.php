@@ -21,7 +21,7 @@ get_header(); ?>
 		<?php
 		$args = array(
 			'post_type' => 'post',
-			'posts_per_page' => 5
+			'posts_per_page' => 3
 //			'meta_query' => array(
 //											array(
 //			'compare' => 'EXISTS'
@@ -51,12 +51,7 @@ get_header(); ?>
 					<div class="overlay-slide item">
 						<div class="item-text">
 							<h5 class="brighter">
-								<?php
-								$categories = get_the_category();
-								if(!empty($categories)) {
-									echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
-								}
-							 	?>
+								<?php echo get_the_date(); ?>
 							</h5>
 							<a href="<?php the_permalink() ?>">
 								<h2><?php the_title(); ?></h2>
