@@ -22,9 +22,7 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
-			<div class="content-container">
-
-				<div class="row site-module-inner">
+				<div class="row site-module-inner news-padding">
 
 					<?php while ( have_posts() ) : the_post(); ?>
 
@@ -37,8 +35,6 @@ get_header(); ?>
 						<?php endwhile; ?>
 
 					</div> <!-- row -->
-
-				</div> <!-- container -->
 
 				<?php the_posts_pagination( array(
 					'mid_size' => 1,
