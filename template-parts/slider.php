@@ -29,6 +29,7 @@
           $wanted_width = 1600;
         endif
         ?>
+
         <div class="overlay-slide">
           <div>
             <h5 class="header-text-area">
