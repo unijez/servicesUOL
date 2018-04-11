@@ -59,3 +59,36 @@ add_action( 'init', 'my_add_excerpts_to_pages' );
 function my_add_excerpts_to_pages() {
      add_post_type_support( 'page', 'excerpt' );
 }
+
+// Single Post Image Function: only allows appropriately sized images
+function header_post_image() {
+	global $post;
+	$image_url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'hero-header', false);
+	if ($image_url[0] != null) {
+		list($img_width, $img_height, $img_type, $img_attr) = getimagesize($image_url[0]);
+	}
+	if ($image_url[0] == "") {
+			return false;
+	} else {
+			if($img_width < 1280 && $img_height < 600) {
+				return false;
+			} else {
+				return $image_url[0];
+			}
+	}
+}
+
+// Default Image Function: adds default image when no preset thumbnail is found
+function default_image($thumbnail) {
+	if ( has_post_thumbnail() ) {
+		the_post_thumbnail($thumbnail);
+	} else {
+		?><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/default-image.jpg" alt="<?php the_title(); ?>" /><?php
+	}
+}
+
+function get_image_result($output) {
+	if ($output == false) {
+		echo "<div class='backup-slide'></div>";
+	}
+}
