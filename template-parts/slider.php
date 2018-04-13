@@ -29,7 +29,8 @@
           $wanted_width = 1600;
         endif
         ?>
-        <div class="overlay-slide item">
+
+        <div class="overlay-slide">
           <div>
             <h5 class="header-text-area">
               <?php echo get_the_date(); ?>
