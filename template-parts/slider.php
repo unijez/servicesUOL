@@ -33,7 +33,7 @@
         <div class="overlay-slide">
           <div>
             <h5 class="header-text-area">
-              <?php echo get_the_date(); ?>
+              <i class="calendar-icon fal fa-calendar-alt"></i><?php echo get_the_date(); ?>
             </h5>
             <a href="<?php the_permalink() ?>">
               <h2 class="header-text-area"><?php the_title(); ?></h2>
