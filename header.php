@@ -29,7 +29,20 @@
 <?php ServicesUOL_body_top(); ?>
 
 <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ServicesUOL' ); ?></a>
-
+	
+	<div class="header-search site-module hide">
+	
+		<div class="module-inner-wrap">
+		
+			<form method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+				<input type="search" placeholder="<?php _e( 'Type and press enter', 'ServicesUOL' ); ?>" name="s" id="s" />
+			</form>
+		
+		</div> <!--module-inner-wrap-->
+	
+	</div> <!--header-search-->
+	
+	
 	<header id="masthead" class="site-header">
 
 		<?php ServicesUOL_header_top(); ?>
@@ -62,7 +75,10 @@
 				'menu_class'      => 'primary-menu'
 			) );
 			?>
-
+			
+			<li class="search-toggle-menu"><button href="#" class="search-toggle main-btn" title="<?php _e( 'Show the search field', 'ServicesUOL' ); ?>"><i class="fas fa-search"></i></button></li>
+			
+			
 			<?php get_search_form() ?>
 
 		</nav><!-- #site-navigation -->

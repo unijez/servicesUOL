@@ -1,27 +1,12 @@
 jQuery(document).ready(function($) {
 
-/*	Reading Time Plugin
-
-	var $article = $('.blog-article');
-
-		$article.readingTime({
-		    readingTimeAsNumber: false,
-			readingTimeTarget: ('.eta'),
-			wordCountTarget: $article.find('.word-count'),
-			wordsPerMinute: 275,
-			lessThanAMinuteString: ('less than a minute'),
-			round: true,
-			lang: 'en',
-			success: function() {
-//				console.log('It worked!');
-			},
-			error: function(message) {
-//				console.log(message);
-				$article.find('.reading-time').remove();
-			}
-		});
-*/
-
+// Toggle search form
+$(".search-toggle").on("click", function(){	
+	$(this).toggleClass("active");
+	$(".header-search").slideToggle();
+	$(".header-search #s").focus();
+	return false;
+});
 
 //	Slider Plugin
 

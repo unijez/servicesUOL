@@ -10,3 +10,14 @@
 	font-size: 40px;
 	line-height: 60px;
 }
+
+
+.site-module {
+	
+	padding: $desktop-side-pad $mobile-side-pad;
+	
+	@include mq(tablet) {
+		padding: $desktop-side-pad ;
+	}
+
+}

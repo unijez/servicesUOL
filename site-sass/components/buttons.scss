@@ -26,3 +26,15 @@
 	height: 40px;
 	background: red;
 }
+
+
+.search-toggle {
+	
+	padding: 13px $mobile-side-pad;
+
+	@include mq(tablet){
+	padding: 13px 15px;
+	}
+	
+	
+}
