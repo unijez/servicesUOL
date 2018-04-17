@@ -33,6 +33,7 @@
 
   <div class="footer-middle">
 
+    <?php get_template_part( 'template-parts/footer-widgets' ); ?>
 
   </div>  <!-- footer-middle -->
 

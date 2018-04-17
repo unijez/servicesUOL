@@ -28,8 +28,36 @@
 
 .footer-middle {
   width: 100vw;
-  height: 500px;
+  padding: 50px 0;
   background-color: $footer-middle-grey;
+
+  .row {
+    width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: stretch;
+    .column {
+      width: 270px;
+      padding: 20px;
+      display: inline-block;
+      height: 350px;
+      align-self: auto;
+
+      a {
+        text-decoration: none;
+        color: $dark-grey;
+      }
+    }
+  }
+}
+
+.widget-container{
+  margin: 0 auto;
+  *:not(h3) {
+   font-family: Helvetica !important;
+  }
 }
 
 // Footer Bottom
