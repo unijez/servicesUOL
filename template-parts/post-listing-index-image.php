@@ -10,7 +10,7 @@
 
 ?>
 
-<div class="news-post" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<div class="news-post excerpted" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div class="news-container">
 
@@ -19,12 +19,12 @@
 			<div class="news-post_text">
 	    	<i class="calendar-icon fal fa-calendar-alt"></i><time class="news-post-date date-published" datetime="<?php the_time('d/m/Y') ?>"><?php the_time('F jS, Y') ?></time>
 				<h1 class="post-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h1>
-				<?php the_excerpt();?>
+				<?php echo excerpt(40);?>
 			</div> <!-- news-post_text -->
 
 			<div class="news-post_img">
 				<a href="<?php the_permalink();?>">
-		    		<?php default_image('large'); ?>
+		    		<?php the_post_thumbnail('large'); ?>
 		    </a>
 			</div> <!-- news-post_img -->
 

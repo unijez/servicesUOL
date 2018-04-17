@@ -16,7 +16,9 @@
  * @version 1.0
  */
 
-get_header(); ?>
+get_header();
+$count = 1;
+?>
 
 	<main id="main" class="site-main">
 
@@ -26,13 +28,27 @@ get_header(); ?>
 
 					<?php while ( have_posts() ) : the_post(); ?>
 
+						<?php if(has_post_thumbnail()): ?>
+						<?php if($count == 2) { echo "</div>"; } ?>
 						<div class="item">
-
-								<?php get_template_part( 'template-parts/post-listing-index' ); ?>
+								<?php get_template_part( 'template-parts/post-listing-index-image' ); ?>
 
 						</div> <!-- item -->
-
-						<?php endwhile; ?>
+						<?php $count = 1; ?>
+					<?php else:
+						if($count == 1) {
+							echo "<div class='group'>";
+						}
+						get_template_part('template-parts/post-listing-index-no_image');
+						if($count == 2) {
+							echo "</div>";
+						}
+						$count++;
+						if($count > 3) {
+							$count = 1;
+						}
+						endif; ?>
+					<?php endwhile; ?>
 
 					</div> <!-- row -->
 
