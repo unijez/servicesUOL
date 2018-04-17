@@ -1,0 +1,40 @@
+
+/* Container */
+
+.pagination {
+  background: $footer-middle-grey;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  font-family: Helvetica;
+}
+
+/* Objects */
+
+.nav-links .current {
+  color: $uni-blue;
+  border: 2px solid $uni-blue;
+  width: 40px;
+  height: 25px;
+  font-size: 13px;
+}
+
+.nav-links span {
+  padding: 13px 17px;
+  align-self: center;
+  transition: ease-in .1s;
+}
+
+.nav-links a {
+  padding: 13px 17px;
+  text-decoration: none;
+  color: $dark-grey;
+  font-size: 13px;
+}
+
+.nav-links .dots {
+  color: $dark-grey;
+}

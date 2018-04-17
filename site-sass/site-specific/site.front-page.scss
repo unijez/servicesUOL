@@ -238,3 +238,48 @@
   font-size: 45px;
   color: $uni-blue;
 }
+
+// Media Queries
+
+.content-container {
+
+	@include mq($until: desktop) {
+		width: auto;
+	}
+
+}
+
+.about-wrapper {
+
+	@include mq($until: tablet) {
+		display: none;
+	}
+
+}
+
+.news-wrapper {
+
+	@include mq($until: tablet) {
+		flex-direction: column;
+	}
+
+}
+
+.item-text .icon-date,
+.item-text .post-title,
+.item-text p {
+
+  @include mq($until: tablet) {
+    padding-left: 30px;
+  }
+
+}
+
+.item-text .post-img img {
+
+  @include mq($until: tablet) {
+    width: 100%;
+    max-height: none;
+  }
+
+}

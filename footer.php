@@ -25,9 +25,8 @@
 
 <footer class="site-footer">
 
-  <div class="footer-top">
+  <div id="map-canvas" class="footer-top">
 
-    <img class="map" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/map.png" alt="<?php bloginfo( 'name' ); ?> University of Lincoln Campus Map">
 
   </div>  <!-- footer-top -->
 
