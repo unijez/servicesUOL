@@ -89,6 +89,10 @@ figcaption,
 figure,
 main { /* 1 */
 	display: block;
+
+	@include mq($until:tablet) {
+		display: inline-block;
+	}
 }
 
 /**

@@ -239,6 +239,10 @@
   color: $light-grey;
   font-weight: 300;
   float: left;
+
+  @include mq($until:tablet) {
+    width: 100%;
+  }
 }
 
 .social-icons .social {
@@ -250,6 +254,12 @@
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 0;
+
+  @include mq($until:tablet) {
+    float: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 
 .social-icons ul {
