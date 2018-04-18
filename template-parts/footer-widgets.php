@@ -43,9 +43,9 @@
 
   <?php if( function_exists('acf_add_local_field_group') )	:?>
 
-  <div class="column">
+  <div class="column socials">
       <!--Display Social Media List-->
-      <h3>Social Media</h3>
+      <h2 class="widget-title">Social Media</h2>
       <?php get_template_part( 'template-parts/site/social-media', 'icons' ); ?>
 
   </div>	 <!--column-->

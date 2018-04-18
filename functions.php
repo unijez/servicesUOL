@@ -123,8 +123,8 @@ function ServicesUOL_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', 'ServicesUOL' ),
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 		'after_widget'  => '</div>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
 	) );
 	register_sidebar( array(
 		'name'          => esc_html__( 'Contact Us Footer Area', 'ServicesUOL' ),
@@ -132,8 +132,8 @@ function ServicesUOL_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', 'ServicesUOL' ),
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 		'after_widget'  => '</div>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
 	) );
 }
 add_action( 'widgets_init', 'ServicesUOL_widgets_init' );
