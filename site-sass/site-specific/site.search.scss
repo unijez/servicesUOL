@@ -1,0 +1,68 @@
+//SEARCH RESULTS PAGE STYLING
+
+.entry-header {
+
+  border: none;
+
+}
+
+.page-title {
+  font-size: 1.5em;
+  font-family: Helvetica;
+  color: $uni-blue;
+}
+
+.searched-header {
+  padding-left: 0px;
+}
+
+.searched-cont {
+  article:not(:last-child) {
+    border-bottom: 2px solid $uni-blue;
+  }
+  article {
+    padding: 30px 0;
+
+    .searched-date {
+      margin-top: 12px;
+      font-size: 16px;
+      font-family: Helvetica;
+      color: $light-grey;
+      font-weight: 300;
+
+      a {
+        color: $secondry-color;
+      }
+    }
+
+    .page-title__inner{
+
+      a {
+        text-decoration: none;
+        color: $uni-blue;
+      }
+    }
+
+    .searched-summary {
+      font-size: 20px;
+      font-weight: 400;
+      font-family: Helvetica;
+      color: $light-grey;
+    }
+
+    .searched-footer {
+      font-size: 16px;
+      font-family: Helvetica;
+      color: $light-grey;
+      font-weight: 300;
+
+      a {
+        color: $secondry-color;
+      }
+    }
+  }
+}
+
+.comments-link {
+  display: none;
+}

@@ -1,0 +1,20 @@
+
+//SEARCH BAR STYLING
+
+.header-search {
+  padding: 25px !important;
+
+  .module-inner-wrap form {
+
+    display: block;
+    text-align: center;
+
+    input {
+    width: 900px;
+    border-radius: 5px;
+    padding: 5px;
+    border: 2px solid $search-bar-gray;
+    margin: 0 auto;
+    }
+  }
+}

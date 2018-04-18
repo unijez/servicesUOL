@@ -1,23 +1,27 @@
 /*--------------------------------------------------------------
 # Button Control
 --------------------------------------------------------------*/
+.search-toggle-menu {
+  align-self: center;
+}
+
 .main-btn {
   display: inline-block;
-  vertical-align: middle; 
+  vertical-align: middle;
+  border: none;
+  align-self: center;
   font: inherit;
   text-align: center;
-  margin: 0; 
-  cursor: pointer; 
-  padding: $mobile-side-pad;
-  border-radius: $global-border-radius;
+  margin: 0;
+  cursor: pointer;
   @include vendor(transition, $global-transition);
-  
-  	
+
+
   	@include hocus() {
   	  text-decoration: none;
   	}
-  	
-  	
+
+
 }
 
 .mobile-button{
@@ -29,12 +33,8 @@
 
 
 .search-toggle {
-	
-	padding: 13px $mobile-side-pad;
-
 	@include mq(tablet){
-	padding: 13px 15px;
 	}
-	
-	
+
+
 }
