@@ -2,6 +2,10 @@
 ## Posts and pages
 --------------------------------------------------------------*/
 
+.posted {
+  margin-bottom: 0px;
+}
+
 .sticky {
     display: block;
 }
@@ -23,14 +27,110 @@
     margin: 0 0 1.5em;
 }
 
+.post {
+  font-family: Helvetica !important;
+  color: $light-grey;
+
+  a {
+    color: $secondry-color;
+  }
+
+  ul {
+    padding-left: 40px;
+    li {
+      list-style: initial;
+    }
+  }
+
+  ol li {
+    list-style: decimal;
+  }
+
+  blockquote {
+  background: #f9f9f9;
+  border-left: 3px solid #ccc;
+  margin: 20px 10px;
+  padding: 15px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  max-width: 50%;
+  //quotes: "\201C""\201D""\2018""\2019";
+  }
+
+
+  blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    margin-bottom: -35px;
+  }
+  blockquote:after {
+    color: #ccc;
+    content: close-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-left: 0.25em;
+    margin-bottom: -35px;
+  }
+  blockquote p {
+    margin: 0 auto;
+    display: inline;
+  }
+}
+
+
 
 
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
 
+.comments-container {
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: 2px solid $uni-blue;
+
+  *:not(h2) {
+    font-family: Helvetica;
+    color: $light-grey;
+
+    .comment-metadata a {
+      text-decoration: none;
+    }
+
+    a {
+      color: $secondry-color;
+    }
+  }
+}
+
+.comments-title, .comments-title span {
+  font-family: Georgia;
+  font-weight: 300;
+  color: $uni-blue;
+  font-size: 25px;
+  line-height: 60px;
+}
+
+.comment-form-comment {
+  display: flex;
+  flex-direction: column;
+
+  textarea {
+    width: 40%;
+  }
+}
+
 .comment-content a {
     word-wrap: break-word;
+}
+
+.comment-body {
+  padding: 20px;
 }
 
 .bypostauthor {

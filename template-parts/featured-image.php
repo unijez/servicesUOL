@@ -24,7 +24,7 @@
 
   <div class="title-container">
     <i class="calendar-icon fal fa-calendar-alt"></i><time class="news-post-date date-published" datetime="<?php the_time('d/m/Y') ?>"><?php the_time('jS F, Y') ?></time>
-    <?php the_title( '<h1 class="page-title__inner">', '</h1>' ); ?>
+    <?php the_title( '<h1 class="page-title__inner posted">', '</h1>' ); ?>
   </div>
 
 <?php endif; ?>
