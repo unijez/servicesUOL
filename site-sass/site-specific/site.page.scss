@@ -11,11 +11,15 @@
 	line-height: 60px;
 }
 
+.slick-side {
+	display:block !important;
+}
+
 
 .site-module {
-	
+
 	padding: $desktop-side-pad $mobile-side-pad;
-	
+
 	@include mq(tablet) {
 		padding: $desktop-side-pad ;
 	}
