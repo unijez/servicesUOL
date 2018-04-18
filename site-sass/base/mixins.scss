@@ -113,3 +113,8 @@
 	display: none;
 }
 
+
+@mixin background-colour($rgb,$opacity) {
+  background-color: rgba($rgb, $opacity);
+}
+

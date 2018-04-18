@@ -34,5 +34,22 @@ $('ul.comment-tabs li').click(function(){
 	})
 
 
+	
+	 /************Mobile Menu************/
+
+	 	var menuButton = $('.mobile-menu-button');
+	 	var globalNav = $('.mobile-navigation');
+
+
+		menuButton.on("click", function(){	
+			$(this).toggleClass("menu-active");
+			globalNav.toggleClass("menu-active");
+			globalNav.slideToggle();
+		});
+	
+	
+	
+	
+
 
 });
