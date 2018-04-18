@@ -66,7 +66,7 @@
 
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'schoolsUOL' ); ?></button>
 
-			<?php//
+<!--			<?php//
 //			wp_nav_menu( array(
 //				'theme_location' => 'primary-menu',
 //				'menu'            => '',
@@ -74,20 +74,20 @@
 //				'container_class' => '',
 //				'menu_class'      => 'primary-menu'
 //			) );
-//			?>
-			
+//			?>-->
+			<ul class="primary-menu">
 			<?php
-			
-					$nav_args = array( 
-						'container' 		=> '', 
+
+					$nav_args = array(
+						'container' 		=> '',
 						'theme_location' => 'primary-menu',
 						'items_wrap' 		=> '%3$s'
 					);
-					
-					wp_nav_menu( $nav_args ); 
-					
+
+					wp_nav_menu( $nav_args );
+
 				?>
-			
+			</ul>
 
 			<li class="search-toggle-menu"><button href="#" class="search-toggle main-btn" title="<?php _e( 'Show the search field', 'ServicesUOL' ); ?>"><i class="fas fa-search"></i></button></li>
 
@@ -98,39 +98,39 @@
 
 		<?php ServicesUOL_header_bottom(); ?>
 
-		
-		
+
+
 		<ul class="mobile-header-control level-elements">
-			
+
 			<li class="search-toggle-menu-item"><button class="mobile-menu-button main-btn" aria-controls="primary-menu" aria-expanded="false"><i class="fal fa-align-left"></i></button></li>
 			<li class="search-toggle-menu"><button href="#" class="search-toggle main-btn" title="<?php _e( 'Show the search field', 'schoolsUOL' ); ?>"><i class="fas fa-search"></i></button></li>
-		
+
 		</ul>
-		
-		
+
+
 		<nav class="mobile-navigation hide">
-							
+
 			<ul class="primary-menu clear">
-					
+
 				<?php
-		
+
 					if ( has_nav_menu( 'primary-menu' ) ) {
-																			
-							wp_nav_menu( $nav_args ); 
-		
+
+							wp_nav_menu( $nav_args );
+
 					} else {
-						
+
 							wp_list_pages( $list_pages_args );
-							
-					} 
-						
+
+					}
+
 				?>
-												
+
 			</ul><!-- .main-menu -->
-				
+
 		</nav><!-- .mobile-navigation -->
-		
-		
+
+
 	</header><!-- #masthead -->
 
 

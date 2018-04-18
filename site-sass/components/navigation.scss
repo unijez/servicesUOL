@@ -148,23 +148,58 @@
 //
 // Mobile Navigation Styles
 //
+  .mobile-header-control {
+    display: none;
+    max-width: 135%;
+    @include mq($until:tablet) {
+			display: flex;
+      height: 50px;
+      position: absolute;
+      width: 100%;
+      left: 0; right: 0; bottom: -10px;
+      background-color: #E3E3E4 !important;
+      z-index: 4;
+		}
 
+    li:first-child {
+      align-self: center;
+      padding-left: 40px;
+    }
+    li:last-child {
+      padding-right: 40px;
+    }
+  }
+
+  .main-navigation {
+    @include mq($until:tablet) {
+			display: none;
+		}
+  }
 
 	.mobile-header-control,
 	.mobile-navigation {
-		
-		@include mq($until:tablet) {
-			margin-left: -$mobile-side-pad;
-			margin-right: -$mobile-side-pad;
-			margin-bottom: 0;
-			@include background-colour($uni-grey,0.2)
-		
-		}
-		
-		
-	}
-	
 
+		@include mq($until:tablet) {
+			margin-bottom: 0;
+      position: absolute;
+      left:0;
+      background-color: #E3E3E4 !important;
+		}
+
+
+	}
+
+  .mobile-navigation {
+    bottom: -60px;
+    z-index: 3;
+    top: 128px;
+    height: 100vh;
+  }
+
+  .stop-scroll {
+    height: 100vh;
+    overflow: hidden;
+  }
 
 
 
@@ -173,35 +208,29 @@
 		padding-top: $mobile-side-pad / 2;
 		padding-bottom: $mobile-side-pad / 2;
 	}
-	
-	
+
+
 	.mobile-navigation .primary-menu ul {
 		padding-left: 5%;
 	}
-	
-	
+
+
 	.mobile-header-control,
 	.mobile-header-control .search-toggle-menu {
 		@include mq(tablet) {
 		display: none;
 		}
 	}
-	
-	
+
+
 	.mobile-header-control {
 		@include flexbox;
 		@include justify-content(space-between);
 
-		
-	}
-	
-	
-	.search-toggle-menu {
-		
-	}
-	
-	.main-navigation {
-		display: none;
-	}
-	
 
+	}
+
+
+	.search-toggle-menu {
+
+	}

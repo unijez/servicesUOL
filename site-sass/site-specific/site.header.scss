@@ -26,6 +26,13 @@ header {
 	display: flex;
 	justify-content: space-between;
 	height: auto;
+	@include mq($until:tablet) {
+		flex-direction: column;
+		flex-wrap: wrap;
+		position: relative;
+		height: 135px;
+	}
+
 }
 
 .site-branding {
@@ -42,6 +49,9 @@ header {
 
 .site-title_container {
 	align-self: center;
+	@include mq($until:tablet) {
+		display: none;
+	}
 }
 
 .logo {

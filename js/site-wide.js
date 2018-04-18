@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
 
 // Toggle search form
-$(".search-toggle").on("click", function(){	
+$(".search-toggle").on("click", function(){
 	$(this).toggleClass("active");
 	$(".header-search").slideToggle();
 	$(".header-search #s").focus();
@@ -34,22 +34,24 @@ $('ul.comment-tabs li').click(function(){
 	})
 
 
-	
+
 	 /************Mobile Menu************/
 
 	 	var menuButton = $('.mobile-menu-button');
 	 	var globalNav = $('.mobile-navigation');
+		var body = $('.home');
 
 
-		menuButton.on("click", function(){	
+		menuButton.on("click", function(){
 			$(this).toggleClass("menu-active");
 			globalNav.toggleClass("menu-active");
+			body.toggleClass("stop-scroll");
 			globalNav.slideToggle();
 		});
-	
-	
-	
-	
+
+
+
+
 
 
 });
