@@ -6,7 +6,11 @@
   height: auto;
   margin: 0 auto;
   padding-top: 50px;
-  padding-bottom: 100px; // QUERY THIS!!!
+  padding-bottom: 100px; // QUERY THIS!
+  @include mq($until:tablet) {
+    padding-bottom: 50px;
+    margin: 0 40px;
+  }
 }
 
 .title-container {
@@ -107,6 +111,12 @@
   align-content: stretch;
   align-items: flex-start;
   padding: 30px 10px;
+
+  @include mq($until:tablet) {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
 }
 
 .extended-navigation_item {
@@ -115,6 +125,10 @@
   align-self: flex-start;
   width: 33.333%;
   padding: 20px 10px;
+
+  @include mq($until:tablet) {
+    width: 100%;
+  }
 }
 
 .extended-navigation_link {
@@ -161,6 +175,10 @@
 
 .item-text {
   width: 270px;
+
+  @include mq($until:tablet) {
+    width: 100%;
+  }
 }
 
 
@@ -200,6 +218,10 @@
   line-height: 17px;
   color: $light-grey;
   font-family: Helvetica;
+
+  @include mq($until:tablet) {
+    padding-right: 30px;
+  }
 }
 
 // Social Media
