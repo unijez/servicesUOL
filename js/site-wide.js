@@ -39,7 +39,7 @@ $('ul.comment-tabs li').click(function(){
 
 	 	var menuButton = $('.mobile-menu-button');
 	 	var globalNav = $('.mobile-navigation');
-		var body = $('.home');
+		var body = $('body');
 
 
 		menuButton.on("click", function(){
