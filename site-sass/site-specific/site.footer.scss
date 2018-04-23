@@ -39,17 +39,22 @@
   }
 
   .row {
-    width: 900px;
+    max-width: 900px;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-content: stretch;
+
+    @include mq($until:tablet) {
+      flex-direction: column;
+    }
+
     .column {
-      width: 270px;
+      max-width: 270px;
       padding: 20px;
       display: inline-block;
-      height: 350px;
+      min-height: 240px;
       align-self: auto;
 
       a {
