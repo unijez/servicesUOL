@@ -30,13 +30,13 @@ header {
 		flex-direction: column;
 		flex-wrap: wrap;
 		position: relative;
-		height: 135px;
+		height: 150px;
 	}
 
 }
 
 .site-branding {
-	width: 500px;
+	max-width: 500px;
 	height: 100px;
 	display: flex;
 	float: left;

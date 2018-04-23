@@ -18,6 +18,9 @@
 	float: left;
 	margin: 0 10px 0 0;
 	position: relative;
+  @include mq($until:tablet) {
+    padding: 0 10px;
+  }
 }
 
 .primary-menu > li:last-child { margin-right: 10px; }
@@ -31,6 +34,11 @@
   color: $dark-grey;
   font-weight: 400;
   letter-spacing: .03em;
+
+  @include mq($until:tablet) {
+    display: inline-block;
+    padding: 11px 0 !important;
+  }
 }
 
 .primary-menu > .menu-item-has-children > a { padding-right: 33px; position: relative; }
@@ -46,11 +54,14 @@
 	right: 16px;
 	top: 50%;
 	margin-top: -2px;
+
+  @include mq($until:tablet) {
+    right: -20px;
+  }
 }
 
-.primary-menu > li:hover > a {
-	color: #FFF;
-	background: $uni-blue;
+.primary-menu > li:hover{
+  background: #EFEFEF;
 }
 
 .primary-menu > .has-children:hover > a::after,
@@ -82,15 +93,21 @@
 /* Drop Down Styling */
 
 .primary-menu ul {
-	position: absolute;
-	padding-top: 20px;
-	margin-left: -110px;
-	z-index: 150;
-	opacity: 0;
-	top: 45px;
-	left: -9999px;
 
-	@include vendor(transition, opacity 450ms cubic-bezier(0.645, 0.045, 0.355, 1.000), top 450ms cubic-bezier(0.645, 0.045, 0.355, 1.000) );
+  @include mq(tablet) {
+    position: absolute;
+  	padding-top: 20px;
+  	margin-left: -110px;
+  	z-index: 150;
+  	opacity: 0;
+  	top: 45px;
+  	left: -9999px;
+
+    @include vendor(transition, opacity 450ms cubic-bezier(0.645, 0.045, 0.355, 1.000), top 450ms cubic-bezier(0.645, 0.045, 0.355, 1.000) );
+  }
+
+
+
 }
 
 .primary-menu > ul { top: 30px; }
@@ -104,6 +121,8 @@
 	border-bottom-color: $dark-grey;
 	left: 50%;
 	margin-left: -10px;
+
+  @include mq($until:tablet) { display: none;}
 }
 
 .primary-menu > li:hover > ul {
@@ -156,8 +175,8 @@
       height: 50px;
       position: absolute;
       width: 100%;
-      left: 0; right: 0; bottom: -10px;
-      background-color: #E3E3E4 !important;
+      left: 0; right: 0; bottom: 0;
+      background-color: #FAFAFA !important;
       z-index: 4;
 		}
 
@@ -183,7 +202,7 @@
 			margin-bottom: 0;
       position: absolute;
       left:0;
-      background-color: #E3E3E4 !important;
+      background-color: #FAFAFA !important;
 		}
 
 
@@ -207,12 +226,62 @@
 		padding-left: $mobile-side-pad;
 		padding-top: $mobile-side-pad / 2;
 		padding-bottom: $mobile-side-pad / 2;
-	}
+
+    @include mq($until:tablet) { padding: 0px; }
 
 
-	.mobile-navigation .primary-menu ul {
-		padding-left: 5%;
 	}
+
+  .mobile-navigation .primary-menu .sub-menu {
+    margin: 0px -50px 0 -50px;
+    padding: 0 30px;
+    background-color: #d9d3d3;
+    overflow: hidden;
+    max-height: 0px;
+    transition: max-height 0.5s ease-out;
+
+    a {
+      width: 100%;
+      display: inline-block;
+      color: $dark-grey;
+      background-color: #d9d3d3;
+      @include mq($until:tablet) {
+        width: 100%;
+      }
+    }
+    a:hover {
+      background-color: #c8c5c5;
+    }
+  }
+
+  .mobile-navigation .primary-menu .menu-item:hover .sub-menu {
+    max-height: 900px;
+    margin: 0px -50px 0 -50px;
+    transition: max-height 0.5s ease-in;
+  }
+
+	.mobile-navigation ul.primary-menu {
+
+    @include mq($until:tablet) {
+      margin-top: 20px;
+      padding: 0 40px;
+    }
+	}
+
+  .mobile-navigation .primary-menu li {
+    width: 100%;
+  }
+
+  .mobile-navigation .primary-menu .current-menu-item {
+   a {
+    border-bottom: 2px solid $uni-blue;
+  }
+
+  .sub-menu a {
+    border-bottom: none;
+  }
+
+  }
 
 
 	.mobile-header-control,
