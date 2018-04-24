@@ -1,8 +1,9 @@
 
 //SEARCH BAR STYLING
 
-.header-search {
-  padding: 25px !important;
+.header-search, .site-module {
+  padding: 25px;
+  background-color: $uni-blue;
 
   .module-inner-wrap form {
 
@@ -11,10 +12,17 @@
 
     input {
     max-width: 900px;
+    border: none;
+    color: #fff;
     border-radius: 5px;
     padding: 5px;
-    border: 2px solid $search-bar-gray;
     margin: 0 auto;
+    font-family: Helvetica;
+    font-weight: 200;
+    letter-spacing: 1px;
+    @include mq(tablet) {
+      width: 900px;
+    }
     }
   }
 }
