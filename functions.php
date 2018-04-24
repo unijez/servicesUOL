@@ -151,7 +151,7 @@ add_action( 'widgets_init', 'ServicesUOL_widgets_init' );
      $excerpt = implode(" ",$excerpt);
    }
    $excerpt = preg_replace('`[[^]]*]`','',$excerpt);
-   return $excerpt;
+   echo $excerpt;
  }
 
 /**

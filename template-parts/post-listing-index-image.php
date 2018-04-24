@@ -19,7 +19,7 @@
 			<div class="news-post_text">
 	    	<i class="calendar-icon fal fa-calendar-alt"></i><time class="news-post-date date-published" datetime="<?php the_time('d/m/Y') ?>"><?php the_time('F jS, Y') ?></time>
 				<h1 class="post-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h1>
-				<?php echo excerpt(40);?>
+				<?php excerpt(40);?>
 			</div> <!-- news-post_text -->
 
 			<div class="news-post_img">
