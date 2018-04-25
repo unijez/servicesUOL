@@ -89,42 +89,6 @@
 ## Comments
 --------------------------------------------------------------*/
 
-.comments-container {
-  margin-top: 40px;
-  padding-top: 40px;
-  border-top: 2px solid $uni-blue;
-
-  *:not(h2) {
-    font-family: Helvetica;
-    color: $light-grey;
-
-    .comment-metadata a {
-      text-decoration: none;
-    }
-
-    a {
-      color: $secondry-color;
-    }
-  }
-}
-
-.comments-title, .comments-title span {
-  font-family: Georgia;
-  font-weight: 300;
-  color: $uni-blue;
-  font-size: 25px;
-  line-height: 60px;
-}
-
-.comment-form-comment {
-  display: flex;
-  flex-direction: column;
-
-  textarea {
-    width: 40%;
-  }
-}
-
 .comment-content a {
     word-wrap: break-word;
 }
