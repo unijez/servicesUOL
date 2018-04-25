@@ -53,14 +53,17 @@ if ( post_password_required() ) {
 
 		<?php the_comments_navigation(); ?>
 
-		<ol class="comment-list">
-			<?php
-			wp_list_comments( array(
-				'style'      => 'ol',
-				'short_ping' => true,
-			) );
-			?>
-		</ol><!-- .comment-list -->
+		<?php if ( have_comments() ) : ?>
+		<?php the_comments_navigation(); ?>
+			<ol class="comment-list">
+		<?php wp_list_comments('type=comment&callback=mytheme_comment'); ?>
+			</ol><!-- .comment-list -->
+		<?php the_comments_navigation(); ?>
+				<?php else : // or, if we don't have comments:
+						if ( ! comments_open() ) : ?>
+							<p class="nocomments"><?php _e( 'HELLOOOOOOOOOOOO', 'twentyten' ); ?></p>
+						<?php endif; // end ! comments_open() ?>
+		<?php endif; ?>
 
 		<?php
 		the_comments_navigation();

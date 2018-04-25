@@ -125,3 +125,37 @@ function custom_comment_fields( $fields ) {
   return $fields;
 }
 add_filter( 'comment_form_default_fields', 'custom_comment_fields' );
+
+function mytheme_comment($comment, $args, $depth) {
+   $GLOBALS['comment'] = $comment; ?>
+   <li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
+     <div id="comment-<?php comment_ID(); ?>">
+      <div class="comment-author vcard">
+
+						<?php echo get_avatar($comment,$default='<path_to_url>' ); ?>
+
+						<ul>
+							<li>
+								<?php printf(__('<cite class="fn">%s</cite>'), get_comment_author_link()) ?>
+							</li>
+							<li>
+								<div class="comment-meta commentmetadata"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf(__('%1$s'), get_comment_date('F j, Y')) ?></a><?php edit_comment_link() ?>
+									<span class="comments-bullet">&#8226;</span>
+									<div class="reply">
+						         <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+						      </div>
+								</div>
+							</li>
+						</ul>
+
+		  </div> <!--comment-author-->
+
+	     <div class="comment__content">
+
+	      <?php comment_text() ?>
+
+	     </div> <!--comment__content-->
+
+     </div>
+     <?php
+}
