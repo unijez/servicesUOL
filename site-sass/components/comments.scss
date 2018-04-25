@@ -1,0 +1,90 @@
+.comments-container {
+  border-top: none;
+
+  label {
+    display: none;
+  }
+
+  p {
+    margin-bottom: 30px;
+  }
+
+  .comment-form-comment textarea {
+    height: 177px;
+  }
+
+  .comment-form-comment textarea::placeholder,
+  input::placeholder  {
+    color: $dark-grey;
+    opacity: 1;
+  }
+
+  textarea#comment, input:not(.submit) {
+    width: 100%;
+    background-color: $footer-middle-grey;
+    border: none;
+    padding: 20px;
+  }
+
+  .comment-form-url {
+    display: none;
+  }
+
+  .form-submit {
+    display: flex;
+    margin: 0 auto;
+    align-content: center;
+    margin-bottom: 50px;
+  }
+
+  .submit {
+    width: 25%;
+    background-color: $uni-blue;
+    border: none;
+    padding: 20px;
+    color: white;
+    margin:  0 auto;
+  }
+
+
+}
+
+.comments-container {
+  margin-top: 40px;
+  padding-top: 40px;
+
+  .comment-notes,
+  .comment-form-author input::placeholder,
+  .comment-form-email input::placeholder,
+  .comment-form-comment textarea::placeholder,
+  .form-submit,
+  .comment-list {
+    font-family: Helvetica;
+    color: $light-grey;
+
+    .comment-metadata a {
+      text-decoration: none;
+    }
+
+    a {
+      color: $secondry-color;
+    }
+  }
+}
+
+.comments-title, .comments-title span, .comment-reply-title {
+  font-family: Georgia;
+  font-weight: 300;
+  color: $uni-blue;
+  font-size: 25px;
+  line-height: 60px;
+}
+
+.comment-form-comment {
+  display: flex;
+  flex-direction: column;
+
+  textarea {
+    width: 40%;
+  }
+}
