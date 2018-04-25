@@ -12,8 +12,10 @@
   color: $uni-blue;
 }
 
-.searched-header {
+header.searched-header {
   padding: 0px;
+  display: block;
+
   @include mq($until:tablet) {
     flex-wrap: nowrap;
     height: auto;
@@ -24,10 +26,17 @@
 
 
   h2 {
+
+    margin-bottom: 5px;
+
     @include mq($until:tablet) {
       width: 100%;
     }
   }
+}
+
+.icon-date {
+  max-height: 20px;
 }
 
 .searched-cont {

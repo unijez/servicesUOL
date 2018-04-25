@@ -24,8 +24,4 @@
 	<div class="entry-summary searched-summary">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
-
-	<footer class="entry-footer searched-footer">
-		<?php ServicesUOL_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
