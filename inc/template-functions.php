@@ -92,3 +92,36 @@ function get_image_result($output) {
 		echo "<div class='backup-slide'></div>";
 	}
 }
+
+// Custom comment form
+add_filter( 'comment_form_defaults', 'remove_textarea' );
+function remove_textarea($defaults)
+{
+    $defaults['comment_field'] = '';
+    return $defaults;
+}
+
+function custom_comment_fields( $fields ) {
+
+  $commenter = wp_get_current_commenter();
+  $req       = get_option( 'require_name_email' );
+  $aria_req  = $req ? "aria-required='true'" : '';
+
+  $fields['author'] =
+  	'<p class="comment-form-author">
+  		<input id="author" name="author" type="text" placeholder="Your name*" size="30" ' . $aria_req . ' />
+  	</p>';
+
+  $fields['email'] =
+  	'<p class="comment-form-email">
+  		<input id="email" name="email" type="email" placeholder="Your e-mail address*" size="30" ' . $aria_req . ' />
+  	</p>';
+
+  $fields['comment_field'] =
+    '<p class="comment-form-comment">
+      <textarea id="comment" name="comment" placeholder="Enter your comment here*" cols="45" rows="8" '.$aria_req.'></textarea>
+    </p>';
+
+  return $fields;
+}
+add_filter( 'comment_form_default_fields', 'custom_comment_fields' );
