@@ -20,16 +20,16 @@ header.searched-header {
     flex-wrap: nowrap;
     height: auto;
     display: inline-block;
-    margin-bottom: 10px;
 
   }
 
 
-  h2 {
+  h2.page-title__inner {
 
     margin-bottom: 5px;
 
     @include mq($until:tablet) {
+      margin-top: 5px;
       width: 100%;
     }
   }
@@ -40,8 +40,6 @@ header.searched-header {
 }
 
 .searched-cont {
-  article:not(:last-child) {
-  }
   article {
     margin-top: 50px;
     @include mq($until:tablet) {
