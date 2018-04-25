@@ -25,7 +25,8 @@ if ( post_password_required() ) {
 ?>
 
 <div id="comments" class="comments-area">
-
+	<?php comment_form();
+		?>
 	<?php
 	// You can start editing here -- including this comment!
 	if ( have_comments() ) :
@@ -36,13 +37,13 @@ if ( post_password_required() ) {
 			if ( '1' === $ServicesUOL_comment_count ) {
 				printf(
 					/* translators: 1: title. */
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'ServicesUOL' ),
+					esc_html__( 'Comments(%1$s)', 'ServicesUOL' ),
 					'<span>' . get_the_title() . '</span>'
 				);
 			} else {
 				printf( // WPCS: XSS OK.
 					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $ServicesUOL_comment_count, 'comments title', 'ServicesUOL' ) ),
+					esc_html( _nx( 'Comments(%1$s)', 'Comments(%1$s)', $ServicesUOL_comment_count, 'comments title', 'ServicesUOL' ) ),
 					number_format_i18n( $ServicesUOL_comment_count ),
 					'<span>' . get_the_title() . '</span>'
 				);
@@ -72,9 +73,6 @@ if ( post_password_required() ) {
 		endif;
 
 	endif; // Check for have_comments().
-
-	comment_form();
 	?>
 
 </div><!-- #comments -->
-
