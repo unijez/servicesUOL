@@ -27,6 +27,303 @@
 
   <div id="map-canvas" class="footer-top">
 
+    <div id="location_map" class="contact_map"></div>
+
+
+				<script type="text/javascript">
+
+
+					function initialize() {
+
+
+				      var mapCanvas = document.getElementById('location_map');
+
+				      var mapOptions = {
+				        center: new google.maps.LatLng(<?php echo 53.2265885//$map['lat']; ?>, <?php echo -0.5494468//$map['lng']; ?>),
+				        zoom: 16,
+				        draggable: true,
+				        scrollwheel: false,
+				        mapTypeId: google.maps.MapTypeId.ROADMAP
+				      }
+
+				      var map = new google.maps.Map(mapCanvas, mapOptions)
+
+				         var image = {
+				             //url: url,
+				             //size: size,
+				             scaledSize: new google.maps.Size(<?php echo 1440 //$icon_width; ?>, <?php echo 500 //$icon_height; ?>),
+				             origin: new google.maps.Point(0,0),
+				             anchor: new google.maps.Point(18, 20)
+				         };
+
+				        /* var marker = new google.maps.Marker({
+				             position: map.getCenter(),
+				             map: map,
+				             icon: image
+				         }); */
+
+
+
+				      map.set('styles',
+              [
+    {
+        "featureType": "all",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "visibility": "simplified"
+            },
+            {
+                "color": "#e7e8ed"
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#042c64"
+            },
+            {
+                "weight": "2.00"
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "hue": "#2000ff"
+            },
+            {
+                "weight": "3.00"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "weight": "3.00"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "hue": "#3100ff"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#042c64"
+            },
+            {
+                "weight": "3.00"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape.man_made",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape.man_made",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "weight": "3.00"
+            },
+            {
+                "hue": "#3100ff"
+            },
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape.man_made",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "hue": "#3100ff"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape.man_made",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#042c64"
+            },
+            {
+                "weight": "3.00"
+            }
+        ]
+    },
+    {
+        "featureType": "poi.park",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#83cead"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#aeb3b6"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#6a7479"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#6a7479"
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#aeb3b6"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#7fc8ed"
+            }
+        ]
+    }
+]);
+
+
+				    }
+				    google.maps.event.addDomListener(window, 'load', initialize);
+
+						</script>
+
+
 
   </div>  <!-- footer-top -->
 

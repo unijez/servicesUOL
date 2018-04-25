@@ -36,6 +36,9 @@ function ServicesUOL_scripts() {
 //	wp_enqueue_style( 'global-style', get_stylesheet_directory_uri() . '/css/global.css' );
 //
 
+	wp_enqueue_script( 'google-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCQhQmlNQu48S_I4TK34bfQh3kVoy74V0Q' );
+
+
 	//Comment Script
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
