@@ -30,7 +30,7 @@ header {
 		flex-direction: column;
 		flex-wrap: wrap;
 		position: relative;
-		height: 150px;
+
 	}
 
 }
@@ -40,17 +40,27 @@ header {
 	height: 100px;
 	display: flex;
 	float: left;
+	@include mq($until:tablet) {
+		flex-direction: column;
+		height: 204px;
+		padding: 10px
+	}
 }
 
 .logo_container {
 	align-self: center;
 	width: 230px;
+	@include mq($until:tablet) {
+		margin: 0 auto;
+		padding: 10px 0;
+	}
 }
 
 .site-title_container {
 	align-self: center;
 	@include mq($until:tablet) {
-		display: none;
+		margin: 0 auto;
+		padding: 10px 0;
 	}
 }
 
@@ -67,6 +77,10 @@ header {
 	margin-bottom: 0;
 	width: 200px;
 	line-height: 21px;
+	@include mq($until:tablet) {
+		text-align: center;
+		margin: 0;
+	}
 }
 
 .site-title a {

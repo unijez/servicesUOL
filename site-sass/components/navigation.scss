@@ -208,7 +208,7 @@
   .mobile-navigation {
     bottom: -60px;
     z-index: 3;
-    top: 128px;
+    top: 154px;
     height: 100vh;
   }
 
@@ -231,7 +231,7 @@
 
   .mobile-navigation .primary-menu .sub-menu {
     margin-left: -50px;
-    background-color: #d9d3d3;
+    background-color: $mobile-nav-grey;
     overflow: hidden;
     max-height: 0px;
     transition: max-height 0.5s ease-out;
@@ -240,7 +240,7 @@
       width: 100%;
       display: inline-block;
       color: $dark-grey;
-      background-color: #d9d3d3;
+      background-color: $mobile-nav-grey;
       text-align: left;
       margin-left: 20px !important;
     }

@@ -104,7 +104,12 @@ h5.header-text-area {
   padding: 11px;
 }
 
+.header-text-area time {
+  font-size: 16px;
+  color: $dark-grey;
+}
+
 .header-text-area .calendar-icon {
-  font-size: 14px;
+  font-size: 16px;
   color: $dark-grey;
 }

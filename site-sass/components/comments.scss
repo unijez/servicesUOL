@@ -1,5 +1,7 @@
 .comments-container {
   border-top: none;
+  width: 800px;
+  margin: 0 auto;
 
   label {
     display: none;
@@ -93,6 +95,12 @@
   }
 }
 
+.comment-author ul li cite {
+  font-style: normal;
+  font-size: 25px;
+  color: $dark-grey;
+}
+
 .comments-container {
   margin-top: 40px;
   padding-top: 40px;
@@ -105,6 +113,7 @@
   .comment-list {
     font-family: Helvetica;
     color: $light-grey;
+    font-weight: 300;
 
     .comment-metadata a {
       text-decoration: none;
@@ -127,7 +136,7 @@
   font-family: Georgia;
   font-weight: 300;
   color: $uni-blue;
-  font-size: 25px;
+  font-size: 33px;
   line-height: 60px;
 }
 
@@ -179,4 +188,5 @@
 
 .comment__content {
   margin-top: 50px;
+  line-height: 25px;
 }

@@ -12,7 +12,7 @@
   ?>
   <div class="overlay-slide">
     <div>
-      <h5 class="header-text-area"><?php the_time('d/m/Y')?></h5>
+      <h3 class="header-text-area"><i class="calendar-icon fal fa-calendar-alt"></i><time class="news-post-date date-published" datetime="<?php the_time('d/m/Y') ?>"><?php the_time('F jS, Y') ?></time></h3>
       <a href="<?php the_permalink() ?>">
         <h2 class="header-text-area"><?php the_title(); ?></h2>
       </a>
