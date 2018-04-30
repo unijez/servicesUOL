@@ -25,6 +25,8 @@
 
 <footer class="site-footer">
 
+<?php if(get_field("toggle_google_maps", "option") == true): ?>
+
   <div id="map-canvas" class="footer-top">
 
     <div id="location_map" class="contact_map"></div>
@@ -326,7 +328,7 @@
 
 
   </div>  <!-- footer-top -->
-
+<?php endif; ?>
 
   <div class="footer-middle">
 
