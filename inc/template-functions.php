@@ -157,5 +157,6 @@ function mytheme_comment($comment, $args, $depth) {
 	     </div> <!--comment__content-->
 
      </div>
+   </li>
      <?php
 }
