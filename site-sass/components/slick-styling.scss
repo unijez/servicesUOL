@@ -48,7 +48,7 @@
 
 .slick-dots{
 
-  li:only-child {
+  > li:only-child {
     display: none;
   }
 
