@@ -26,6 +26,6 @@
 	    </a>
 		</div>
 
-		<?php the_excerpt();?>
+		<p><?php excerpt(20);?></p>
 	</div> <!-- item-text -->
 </div> <!-- post -->
