@@ -36,7 +36,7 @@ function ServicesUOL_scripts() {
 //	wp_enqueue_style( 'global-style', get_stylesheet_directory_uri() . '/css/global.css' );
 //
 
-	wp_enqueue_script( 'google-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCQhQmlNQu48S_I4TK34bfQh3kVoy74V0Q' );
+	wp_enqueue_script( 'google-maps', 'https://maps.googleapis.com/maps/api/js?key='.get_field('google_maps_api_key', 'options') );
 
 
 	//Comment Script
