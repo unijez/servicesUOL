@@ -233,9 +233,6 @@
   .mobile-navigation .primary-menu .sub-menu {
     margin-left: -50px;
     background-color: $mobile-nav-grey;
-    overflow: hidden;
-    max-height: 0px;
-    transition: max-height 0.5s ease-out;
 
     a {
       width: 100%;
@@ -255,7 +252,6 @@
 
   .mobile-navigation .primary-menu .menu-item:hover .sub-menu {
     max-height: 900px;
-    transition: max-height 0.5s ease-in;
   }
 
 	.mobile-navigation ul.primary-menu {
