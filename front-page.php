@@ -29,13 +29,13 @@ get_header(); ?>
 						<div class="about-wrapper_text">
 							<h1 class="about-wrapper_heading">Welcome <br>to the <?php bloginfo( 'name' ); ?> website</h1>
 							<div class="about-wrapper_excerpt">
-								<?php excerpt(20); ?>
+								<?php excerpt(30); ?>
 
 								<?php
 	    					query_posts(get_option('page_on_front'));
 	    						while ( have_posts() ) : the_post()
 								?>
-	    					<?php excerpt(5); ?>
+	    					<?php //excerpt(15); ?>
 
 								<?php
 	    						endwhile;

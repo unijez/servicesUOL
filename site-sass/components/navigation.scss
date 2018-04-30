@@ -58,7 +58,8 @@
 }
 
 .primary-menu > li:hover{
-  background: #EFEFEF;
+  a { color: #fff; }
+  background: $uni-blue;
 }
 
 .primary-menu > .has-children:hover > a::after,
@@ -206,15 +207,15 @@
 	}
 
   .mobile-navigation {
-    bottom: -60px;
     z-index: 3;
     top: 154px;
-    height: 100vh;
   }
 
   .stop-scroll {
-    height: 100vh;
-    overflow: hidden;
+
+    header + *, footer {
+      display: none !important;
+    }
   }
 
 
@@ -260,7 +261,7 @@
 	.mobile-navigation ul.primary-menu {
 
     @include mq($until:tablet) {
-      margin-top: 20px;
+      margin-top: 50px;
     }
 	}
 
