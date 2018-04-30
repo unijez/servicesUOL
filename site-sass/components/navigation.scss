@@ -3,6 +3,7 @@
    ========================================================================== */
 
 .main-navigation {
+  padding-left: 50px;
   width: 1000px;
   display: flex;
   flex-direction: row;
@@ -156,6 +157,10 @@
 
 .menu-toggle {
   visibility: hidden;
+
+  @include mq(tablet) {
+    display: none;
+  }
 }
 
 
