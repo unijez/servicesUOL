@@ -42,7 +42,7 @@ header {
 	float: left;
 	@include mq($until:tablet) {
 		flex-direction: column;
-		height: 204px;
+		height: 180px;
 		padding: 10px
 	}
 }

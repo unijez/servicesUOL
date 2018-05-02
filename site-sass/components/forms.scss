@@ -1,7 +1,7 @@
 /* ==========================================================================
    #DEFAULT FORM LAYOUTS
    ========================================================================== */
-		
+
 		/**
 		 * A basic form reset
 		 *
@@ -44,10 +44,10 @@
 			border-color: grey;
 			background-color: white;
 			padding: 10px;
-			
+
 				@include mq(tablet){
 					padding: 13px;
-					
+
 				}
 		}
 
@@ -69,12 +69,12 @@
 		textarea {
 			min-height:  200px;
 		}
-		
-		
+
+
 		/**
 		 * Comment/Review Submit Button
-		 */	
-		
+		 */
+
 		input[type="submit"],
 		input[type="reset"],
 		input[type="button"] {
@@ -87,15 +87,13 @@
 			border-radius: $medium-border-radius;
 /*			padding-top: $site-header-padding - 5px;
 			padding-bottom: $site-header-padding - 5px;*/
-			
+
 			@include hocus() {
 				background-color: $base-colour;
 				text-decoration: none;
 			}
-			
+
 			@include mq(tablet) {
 				/*width: 46.5%;*/
 			}
 		}
-		
-		

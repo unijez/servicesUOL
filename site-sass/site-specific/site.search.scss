@@ -43,7 +43,7 @@ header.searched-header {
   article {
     margin-top: 50px;
     @include mq($until:tablet) {
-      padding: 0 50px;
+      padding: 0 30px;
     }
     .searched-date {
       margin-top: 12px;

@@ -2,6 +2,10 @@
   border-top: none;
   width: 800px;
   margin: 0 auto;
+  @include mq ($until:tablet) {
+    padding: 0 30px;
+    width: 100%;
+  }
 
   label {
     display: none;

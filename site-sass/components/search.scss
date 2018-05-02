@@ -19,7 +19,6 @@
     margin: 0 auto;
     font-family: Helvetica;
     font-weight: 200;
-    letter-spacing: 1px;
     @include mq(tablet) {
       width: 900px;
     }

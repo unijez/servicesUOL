@@ -101,13 +101,13 @@
   align-self: center;
   @include mq($until:tablet) {
     width: 100%;
-    padding: 0 50px;
+    padding: 30px 30px;
   }
 }
 
 .news-post_text_n {
   @include mq($until:tablet) {
-    padding: 0 50px;
+    padding: 30px 30px;
   }
 }
 
