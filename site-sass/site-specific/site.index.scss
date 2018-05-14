@@ -113,7 +113,6 @@
 
 .news-post_text h1, .news-post_text_n h1 {
   font-size: 39px;
-  overflow: hidden;
 
   @include mq($until:tablet) {
     font-size: 25px;
