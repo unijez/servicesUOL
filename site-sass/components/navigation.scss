@@ -99,7 +99,7 @@
   	margin-left: -110px;
   	z-index: 150;
   	opacity: 0;
-  	top: 45px;
+  	//top: 45px;
   	left: -9999px;
 
     @include vendor(transition, opacity 450ms cubic-bezier(0.645, 0.045, 0.355, 1.000), top 450ms cubic-bezier(0.645, 0.045, 0.355, 1.000) );
@@ -176,7 +176,6 @@
     @include mq($until:tablet) {
 			display: flex;
       height: 50px;
-      position: absolute;
       width: 100%;
       left: 0; right: 0; bottom: 0;
       background-color: #FAFAFA !important;
@@ -200,10 +199,9 @@
 
 	.mobile-header-control,
 	.mobile-navigation {
-
 		@include mq($until:tablet) {
 			margin-bottom: 0;
-      position: absolute;
+      //position: absolute;
       left:0;
       background-color: #FAFAFA !important;
 		}
@@ -217,8 +215,8 @@
   }
 
   .stop-scroll {
-
-    header + *, footer {
+    overflow: hidden;
+    .sitebody-content, .site-footer {
       display: none !important;
     }
   }
@@ -259,13 +257,6 @@
     max-height: 900px;
   }
 
-	.mobile-navigation ul.primary-menu {
-
-    @include mq($until:tablet) {
-      margin-top: 50px;
-    }
-	}
-
   .mobile-navigation .primary-menu li {
     width: 100%;
     @include mq($until:tablet) { padding-left: 45px;}
@@ -286,7 +277,7 @@
 	.mobile-header-control,
 	.mobile-header-control .search-toggle-menu {
 		@include mq(tablet) {
-		display: none;
+		display: none !important;
 		}
 	}
 
