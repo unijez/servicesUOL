@@ -90,6 +90,14 @@ function header_post_image() {
   }
 }
 
+function title_trim($title, $limit, $isset) {
+  if((strlen($title) > $limit) && $isset == true) {
+    echo substr($title, 0, ($limit-3)).'...';
+  } else if ((strlen($title) < $limit) || $isset == false) {
+    echo $title;
+  }
+}
+
 // Default Image Function: adds default image when no preset thumbnail is found
 function default_image($thumbnail) {
 	if ( has_post_thumbnail() ) {
