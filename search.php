@@ -17,7 +17,7 @@ get_header(); ?>
 
 			<?php if ( have_posts() ) : ?>
 
-					<div class="content-container searched-cont">
+				<div class="content-container searched-cont">
 					<h1 class="page-title">
 						<?php
 						/* translators: %s: search query. */
@@ -26,7 +26,7 @@ get_header(); ?>
 					</h1>
 
 
-
+					<div class="search-results">
 			 		<?php while ( have_posts() ) : the_post(); ?>
 
 
@@ -43,6 +43,7 @@ get_header(); ?>
 			 		<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 					</div>
+				</div>
 
 			<?php endif;  wp_reset_query(); ?>
 

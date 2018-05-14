@@ -27,19 +27,27 @@
     margin: 0 0 1.5em;
 }
 
+.search-results > .post  {
+  // limits width of content
+  *:not(.entry-content):not(figure):not(img) {
+    padding: 0 0px !important;
+  }
+}
+
+.post {
+  *:not(.entry-content):not(figure):not(img) {
+    padding: 0 50px;
+    @include mq($until:tablet) {
+      padding: 0 30px;
+    }
+  }
+}
+
 .post {
   font-family: Helvetica !important;
   color: $light-grey;
   font-weight: 300;
   line-height: 25px;
-
-  // limits width of content
-  *:not(.entry-content):not(figure):not(img) {
-    padding: 0 50px;
-    @include mq ($until:tablet) {
-      padding: 0 30px;
-    }
-  }
 
   a {
     padding: 0px;
