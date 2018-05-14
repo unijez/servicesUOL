@@ -61,7 +61,7 @@ function my_add_excerpts_to_pages() {
 }
 
 // Single Post Image Function: only allows appropriately sized images
-function header_post_image() {
+/*function header_post_image() {
 	global $post;
 	$image_url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'hero-header', false);
 	if ($image_url[0] != null) {
@@ -76,6 +76,18 @@ function header_post_image() {
 				return $image_url[0];
 			}
 	}
+}*/
+
+function header_post_image() {
+  global $wp_query;
+
+
+  $imgdata = wp_get_attachment_image_src( get_post_thumbnail_id($wp_query->post->ID ), 'hero-header' );
+  if (( $imgdata[1] >= 1280 ) || ( $imgdata[2] >= 600)) {
+  return $imgdata[0];
+  } else {
+    return false;
+  }
 }
 
 // Default Image Function: adds default image when no preset thumbnail is found
