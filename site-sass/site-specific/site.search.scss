@@ -12,6 +12,7 @@
   color: $uni-blue;
 }
 
+//Styling the user searched term
 header.searched-header {
   padding: 0px;
   display: block;
@@ -23,7 +24,7 @@ header.searched-header {
 
   }
 
-
+  //Editing pre comupted styles to suit the search area
   h2.page-title__inner {
 
     margin-bottom: 5px;
@@ -39,6 +40,7 @@ header.searched-header {
   max-height: 20px;
 }
 
+//Fixed the search container
 .searched-cont {
   article {
     margin-top: 50px;
@@ -57,6 +59,7 @@ header.searched-header {
       }
     }
 
+    //Editing the page titles of the results
     .page-title__inner{
       @include mq($until:tablet) {
         font-size: 25px;
@@ -69,6 +72,8 @@ header.searched-header {
       }
     }
 
+
+    //Summary stylings
     .searched-summary {
       font-size: 20px;
       font-weight: 400;
@@ -82,6 +87,7 @@ header.searched-header {
       }
     }
 
+    //Editing the footer of the searched items
     .searched-footer {
       font-size: 16px;
       font-family: Helvetica;
