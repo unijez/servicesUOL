@@ -1,6 +1,11 @@
 /*--------------------------------------------------------------
 # Page Elements
 --------------------------------------------------------------*/
+.content-container, .title-container  {
+	@include mq($until:tablet) {
+		padding: 0 30px;
+	}
+}
 
 .page-title__inner {
 	font-family: Georgia;
