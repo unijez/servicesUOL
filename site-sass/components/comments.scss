@@ -52,7 +52,7 @@
     margin:  0 auto;
 
     @include mq($until:tablet) {
-      width: 60%;
+      width: auto;
     }
   }
 
