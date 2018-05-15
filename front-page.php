@@ -20,7 +20,7 @@ get_header(); ?>
 	<?php get_template_part( 'template-parts/slider' ); ?>
 	<main id="main" class="site-main">
 
-				<div class="content-container">
+				<div class="fp-content-container">
 
 
 

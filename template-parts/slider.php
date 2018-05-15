@@ -37,7 +37,7 @@
             </h5>
             <a href="<?php the_permalink() ?>">
               <?php $maxLen = get_field("maximum_length", "option"); ?>
-              <h2 class="header-text-area"><?php title_trim(get_the_title(), get_field("maximum_length", "option"), isset($maxLen)); ?></h2>
+              <h2 class="header-text-area"><?php the_title(); ?></h2>
             </a>
             <div>
                 <a href="<?php the_permalink()?>" class="header-text-area">Read More</a>
