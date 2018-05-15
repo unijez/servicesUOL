@@ -1,3 +1,5 @@
+//Comments styling
+//Style the comment form box
 .comments-container {
   border-top: none;
   width: 800px;
@@ -7,8 +9,16 @@
     width: 100%;
   }
 
+  //Remove labels
   label {
     display: none;
+  }
+
+  //Change the placeholder values of the form
+  .comment-form-comment textarea::placeholder,
+  input::placeholder  {
+    color: $dark-grey;
+    opacity: 1;
   }
 
   p {
@@ -17,12 +27,6 @@
 
   .comment-form-comment textarea {
     height: 177px;
-  }
-
-  .comment-form-comment textarea::placeholder,
-  input::placeholder  {
-    color: $dark-grey;
-    opacity: 1;
   }
 
   textarea#comment, input:not(.submit) {
@@ -36,6 +40,8 @@
     display: none;
   }
 
+
+  //Style the submit button / container
   .form-submit {
     display: flex;
     margin: 0 auto;
@@ -57,10 +63,14 @@
     }
   }
 
+
+  //Comments section
   .says {
     display: none;
   }
 
+
+  //Commenter icon
   .comment-author {
     img {
       height: 70px;
@@ -104,6 +114,30 @@
   font-style: normal;
   font-size: 25px;
   color: $dark-grey;
+}
+
+//Comment stylings
+.comment-author ul {
+  padding-top: 15px;
+  margin-left: 100px;
+
+  @include mq($until:tablet) {
+    margin-left: 70px;
+  }
+
+
+  li:first-child cite a{
+    color: $dark-grey;
+    font-size: 20px;
+  }
+
+  li:last-child div a{
+    color: $light-grey;
+  }
+
+  a {
+    text-decoration: none;
+  }
 }
 
 .comments-container {
@@ -153,6 +187,7 @@
   }
 }
 
+//Styling the sub comments
 .comment-list {
   @include mq($until:tablet) {
     padding: 0px;
@@ -165,28 +200,6 @@
 
   @include mq($until:tablet) {
     margin: 20px 0px;
-  }
-}
-
-.comment-author ul {
-  padding-top: 15px;
-  margin-left: 100px;
-
-  @include mq($until:tablet) {
-    margin-left: 70px;
-  }
-
-  li:first-child cite a{
-    color: $dark-grey;
-    font-size: 20px;
-  }
-
-  li:last-child div a{
-    color: $light-grey;
-  }
-
-  a {
-    text-decoration: none;
   }
 }
 

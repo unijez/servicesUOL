@@ -5,6 +5,8 @@
   align-self: center;
 }
 
+
+//Main button for the toggle search area
 .main-btn {
   display: inline-block;
   vertical-align: middle;
@@ -42,15 +44,15 @@
 
 /* Mobile Navigation Button
    ===========================================================*/
-   
-   
+
+//Hide mobile nav button when it's not in mobile view
 .site-header .mobile-menu-button {
-	
-	
+
+
 	@include mq(tablet){
 		display: none;
 	}
-	
+
 }
 
 .menu-active .mobile-menu-button{

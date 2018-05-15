@@ -2,6 +2,7 @@
 # Page Elements
 --------------------------------------------------------------*/
 
+//Styling inner title elements
 .page-title__inner {
 	font-family: Georgia;
   font-weight: 300;
@@ -11,16 +12,20 @@
 	line-height: 60px;
 }
 
+//Enforcing the full width title
 .maximum-width-title {
 	max-width: 100% !important;
 }
 
+//Single slide for single pages
 .slick-side {
 	display:block !important;
 }
 
+
+//Styling the entry Content
 .entry-content {
-	p > img
+	p > img //FIX THIS: DOESN'T ACTUALLY REMOVE PADDING / P TAGS FROM IMAGES //
 	{
 		@include mq($until:tablet) {
 			width: 123%;
@@ -28,6 +33,7 @@
 		}
 	}
 
+	//Reset ul, ol, li stylings
 	ul {
 		padding-left: 40px;
 		li {
@@ -40,6 +46,7 @@
 	}
 }
 
+//Style the p tags, the headings and certain divs
 .entry-content {
 	p, .justify, h1,h2,h3,h4,h5,h6{
 

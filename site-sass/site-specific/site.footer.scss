@@ -13,6 +13,7 @@
   }
 }
 
+//Removing all of the content from footer top
 .footer-top:before {
   content: '';
   display: block;
@@ -21,6 +22,7 @@
   height: 2px;
 }
 
+//Map styling
 .footer-top .iframe {
   width: 100%;
   height: 500px;

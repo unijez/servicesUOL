@@ -1,3 +1,8 @@
+/*
+  BLOG PAGE STYLING
+*/
+
+//Styling all the news rows
 .row > div:not(:first-child):not(.group), .row .group:not(:first-child) > div{
   @include mq($until:tablet) {
     margin-top: 50px;
@@ -8,6 +13,7 @@
   padding-top: 20px;
 }
 
+//Different news wrappers and containers styling
 .news-container {
   width: 100%;
   background-color: $footer-middle-grey;
@@ -45,6 +51,7 @@
   }
 }
 
+
 .news-post_wrapper_n {
   display: flex;
   flex-direction: row;
@@ -60,6 +67,7 @@
   }
 }
 
+//Styling when 2 posts are put together
 .group {
   width: 900px;
   display: flex;
@@ -94,7 +102,7 @@
   }
 }
 
-
+//Styling the news post content
 .news-post_text {
   width: 50%;
   padding-right: 40px;

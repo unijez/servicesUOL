@@ -34,6 +34,7 @@
   }
 }
 
+//Universal styling for blockquotes
 blockquote {
 background: #f9f9f9;
 border-left: 3px solid #ccc;
@@ -48,6 +49,29 @@ max-width: 75%;
   max-width: 100%;
 }
 
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  margin-bottom: -35px;
+}
+blockquote:after {
+  color: #ccc;
+  content: close-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-left: 0.25em;
+  margin-bottom: -35px;
+}
+blockquote p {
+  margin: 0 auto;
+  display: inline;
+}
+
+
+//Stying post content
 .post {
   font-family: Helvetica !important;
   color: $light-grey;
@@ -90,28 +114,6 @@ max-width: 75%;
 
   .wp-caption {
     margin-bottom: 40px;
-  }
-
-
-  blockquote:before {
-    color: #ccc;
-    content: open-quote;
-    font-size: 4em;
-    line-height: 0.1em;
-    margin-right: 0.25em;
-    margin-bottom: -35px;
-  }
-  blockquote:after {
-    color: #ccc;
-    content: close-quote;
-    font-size: 4em;
-    line-height: 0.1em;
-    margin-left: 0.25em;
-    margin-bottom: -35px;
-  }
-  blockquote p {
-    margin: 0 auto;
-    display: inline;
   }
 }
 
