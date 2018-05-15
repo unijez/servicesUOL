@@ -34,13 +34,18 @@
   }
 }
 
-.post {
-  *:not(.entry-content):not(figure):not(img) {
-    padding: 0 50px;
-    @include mq($until:tablet) {
-      padding: 0 30px;
-    }
-  }
+blockquote {
+background: #f9f9f9;
+border-left: 3px solid #ccc;
+margin: 20px 10px;
+padding: 15px;
+display: inline-flex;
+justify-content: center;
+align-items: center;
+box-sizing: border-box;
+max-width: 75%;
+@include mq($until:tablet) {
+  max-width: 100%;
 }
 
 .post {
@@ -53,27 +58,7 @@
     padding: 0px;
   }
 
-  ul {
-    padding-left: 40px;
-    li {
-      list-style: initial;
-    }
-  }
 
-  ol li {
-    list-style: decimal;
-  }
-
-  blockquote {
-  background: #f9f9f9;
-  border-left: 3px solid #ccc;
-  margin: 20px 10px;
-  padding: 15px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  max-width: 50%;
   //quotes: "\201C""\201D""\2018""\2019";
   }
 
@@ -86,6 +71,17 @@
       font-size: 25px;
       line-height: 32px;
     }
+  }
+
+  ul {
+    padding-left: 40px;
+    li {
+      list-style: initial !important;
+    }
+  }
+
+  ol > li {
+    list-style: decimal !important;
   }
 
   figure {
