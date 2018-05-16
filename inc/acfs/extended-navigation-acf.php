@@ -1,5 +1,7 @@
 <?php
 //Extended Navigation
+if( function_exists('acf_add_local_field_group') ):
+
 acf_add_local_field_group(array(
 	'key' => 'group_5acc822ddf014',
 	'title' => 'Extended Navigation',
@@ -38,9 +40,9 @@ acf_add_local_field_group(array(
 	'location' => array(
 		array(
 			array(
-				'param' => 'page',
+				'param' => 'page_type',
 				'operator' => '==',
-				'value' => '108',
+				'value' => 'front_page',
 			),
 		),
 	),
@@ -53,4 +55,6 @@ acf_add_local_field_group(array(
 	'active' => 1,
 	'description' => 'Extended Navigation',
 ));
+
+endif;
 ?>
