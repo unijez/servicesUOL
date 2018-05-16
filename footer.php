@@ -343,6 +343,7 @@
       <a href="http://www.lincoln.ac.uk/home/" rel="<?php bloginfo( 'name' ); ?>">
         <img class="logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/uol_landscape.svg" alt="<?php bloginfo( 'name' ); ?> University Of Lincoln Logo">
       </a>
+      <p class="credit">Designed by <b>Thomas Moore</b> (2nd year Interactive Design). Developed by <b>Brennan Pena</b> (1st year Computer Science).</p>
     </div>
 
     <p class="coppyright">	&#169; <b>University of Lincoln.</b> All rights reserved</p>
