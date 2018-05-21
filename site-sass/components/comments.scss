@@ -1,6 +1,6 @@
 //Comments styling
 //Style the comment form box
-.comments-container {
+.comments-container, .wpcf7-form {
   border-top: none;
   width: 800px;
   margin: 0 auto;
@@ -16,7 +16,8 @@
 
   //Change the placeholder values of the form
   .comment-form-comment textarea::placeholder,
-  input::placeholder  {
+  input::placeholder, .wpcf7-form textarea::placeholder {
+    font-family: Helvetica;
     color: $dark-grey;
     opacity: 1;
   }
@@ -25,11 +26,11 @@
     margin-bottom: 30px;
   }
 
-  .comment-form-comment textarea {
+  .comment-form-comment textarea, .wpcf7-form textarea {
     height: 177px;
   }
 
-  textarea#comment, input:not(.submit) {
+  textarea#comment, input:not(.submit):not(.wpcf7-submit) {
     width: 100%;
     background-color: $footer-middle-grey;
     border: none;
@@ -42,7 +43,7 @@
 
 
   //Style the submit button / container
-  .form-submit {
+  .form-submit, .wpcf7-form p:last-child {
     display: flex;
     margin: 0 auto;
     align-content: center;
@@ -50,7 +51,7 @@
     width: 100%;
   }
 
-  .submit {
+  .submit, .wpcf7-submit {
     width: 25%;
     background-color: $uni-blue;
     border: none;
