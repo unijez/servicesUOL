@@ -17,7 +17,9 @@
  */
 
 get_header(); ?>
+<?php if(get_field("toggle_slider", "option") == true): ?>
 	<?php get_template_part( 'template-parts/slider' ); ?>
+<?php endif; ?>
 	<main id="main" class="site-main">
 
 				<div class="content-container no-pad">
@@ -76,7 +78,7 @@ get_header(); ?>
 					</div><!-- extended-navigation_wrapper -->
 
 
-
+					<?php if(get_field("toggle_latest_news", "option") == true): ?>
 					<h1 class="content-heading">The Latest News</h1><i class="far fa-angle-down"></i>
 					<div class="news-wrapper">
 
@@ -100,7 +102,7 @@ get_header(); ?>
 	 					<?php endif;  wp_reset_query(); ?>
 
 					</div><!-- news-wrapper -->
-
+					<?php endif; ?>
 
 
 					<h1 class="content-heading">Social Media</h1><i class="far fa-angle-down"></i>

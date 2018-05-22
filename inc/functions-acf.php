@@ -87,4 +87,8 @@ if( function_exists('acf_add_local_field_group') ):
 
 	require get_template_directory() . '/inc/acfs/maximum-title-length-acf.php';
 
+	require get_template_directory() . '/inc/acfs/slider-options-acf.php';
+
+	require get_template_directory() . '/inc/acfs/latest-news-acf.php';
+
 endif;
