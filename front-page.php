@@ -17,7 +17,7 @@
  */
 
 get_header(); ?>
-<?php if(get_field("toggle_slider", "option") == true): ?>
+<?php if(get_field("toggle_slider") == true): ?>
 	<?php get_template_part( 'template-parts/slider' ); ?>
 <?php endif; ?>
 	<main id="main" class="site-main">
@@ -37,7 +37,7 @@ get_header(); ?>
 	    					query_posts(get_option('page_on_front'));
 	    						while ( have_posts() ) : the_post()
 								?>
-	    					<?php //excerpt(15); ?>
+	    					<?php //excerpt(15) ?>
 
 								<?php
 	    						endwhile;
@@ -49,8 +49,8 @@ get_header(); ?>
 						</div><!-- about-wrapper_text -->
 
 						<div class="about-wrapper_img">
-							<!-- IF STATEMENT NEEDED FOR ERROR -->
-							<?php the_post_thumbnail( $post = 143, 'small' ); ?>
+
+							<?php ?>
 						</div><!-- about-wrapper_img -->
 
 					</div><!-- about-wrapper -->
@@ -78,7 +78,7 @@ get_header(); ?>
 					</div><!-- extended-navigation_wrapper -->
 
 
-					<?php if(get_field("toggle_latest_news", "option") == true): ?>
+					<?php if(get_field("toggle_latest_news") == true): ?>
 					<h1 class="content-heading">The Latest News</h1><i class="far fa-angle-down"></i>
 					<div class="news-wrapper">
 
