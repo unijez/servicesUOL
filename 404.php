@@ -14,14 +14,14 @@
 get_header(); ?>
 
 	<main id="main" class="site-main">
-				
-				<div class="container-404">
-					
+
+				<div class="content-container">
+
 							<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'ServicesUOL' ); ?></h1>
-						
+
 							<p><?php esc_html_e( 'It looks like nothing was found at this location.', 'ServicesUOL' ); ?></p>
 
-						
+
 				</div> <!-- 404-container -->
 
 	</main><!-- #main -->
