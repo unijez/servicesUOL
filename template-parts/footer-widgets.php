@@ -26,7 +26,7 @@
 
           <div class="textwidget">
             <p><?php echo get_field("address", "options"); ?></p>
-            <p><a href="tel:<?php echo get_field("telephone_number", "options")?>"><?php echo sanitize_text_field(get_field("telephone_number", "options")); ?></a></p>
+            <p><a href="tel:<?php echo str_replace(' ', '', get_field("telephone_number", "options"));?>"><?php echo sanitize_text_field(get_field("telephone_number", "options")); ?></a></p>
             <p><a href="mailto:<?php echo get_field("e-mail", "options")?>"><?php echo sanitize_text_field(get_field("e-mail", "options")); ?></a></p>
           </div>
 
