@@ -9,7 +9,7 @@
  */
 
 ?>
-
+<!-- template for the front page post listings -->
 <div class="news-post" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div class="item-text">

@@ -1,7 +1,10 @@
+<!--
+PHP to create the featured image on pages and posts
+-->
 <?php if(has_post_thumbnail()): ?>
 <div class="hero-header">
   <div class="slick-slide heading-image" style="background-image: url(<?php echo header_post_image() ?>)">
-
+  <!-- Check the image size -->
   <?php
   global $post;
   if(has_post_thumbnail()) {

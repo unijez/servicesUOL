@@ -1,4 +1,6 @@
 <div class="main-slider">
+
+  <!-- Args for the query -->
   <?php
   $args = array(
     'post_type' => 'post',
@@ -14,10 +16,11 @@
   if( $recent_posts->have_posts() ): ?>
 
     <div class="hero-header">
-
+      <!-- Loop through the posts -->
       <?php while ($recent_posts->have_posts() ) : $recent_posts->the_post() ?>
 
       <?php
+      //Check the size of the image to see if it's suitable
       if(has_post_thumbnail()):
 
         $imgdata = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'hero-header', false);
@@ -36,6 +39,7 @@
       <div class="slick-slide heading-image" style="background-image: url(<?php echo $background_image; ?>)">
         <?php get_image_result(header_post_image()); ?>
         <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title() ?></a>
+        <!-- If the post didn't have a thumbnail / featured image, create the backup slide -->
         <?php if($backup_slide == true): ?>
           <div class="backup-slide"></div>
         <?php endif; ?>

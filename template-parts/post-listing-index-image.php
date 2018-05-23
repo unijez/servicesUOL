@@ -10,6 +10,8 @@
 
 ?>
 
+<!-- Template for the blog / news page for a post with an image -->
+
 <div class="news-post excerpted" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div class="news-container">
