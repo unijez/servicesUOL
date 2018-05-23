@@ -58,5 +58,5 @@ $count = 1;
 				) ); ?>
 
 				<?php endif;  wp_reset_query(); ?>
-<div>
+<div class="sitebody-closer">
 <?php get_footer(); ?>
