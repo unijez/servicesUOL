@@ -64,7 +64,7 @@
 
 		<nav id="site-navigation" class="main-navigation">
 
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'schoolsUOL' ); ?></button>
+			<button class="menu-toggle"><?php esc_html_e( 'Primary Menu', 'schoolsUOL' ); ?></button>
 
 <!--			<?php//
 //			wp_nav_menu( array(
@@ -89,7 +89,7 @@
 				?>
 			</ul>
 
-			<li class="search-toggle-menu"><button href="#" class="search-toggle main-btn" title="<?php _e( 'Show the search field', 'ServicesUOL' ); ?>"><i class="fas fa-search"></i></button></li>
+			<li class="search-toggle-menu"><button class="search-toggle main-btn" title="<?php _e( 'Show the search field', 'ServicesUOL' ); ?>"><i class="fas fa-search"></i></button></li>
 
 		</nav><!-- #site-navigation -->
 
@@ -102,7 +102,7 @@
 	</header><!-- #masthead -->
 	<ul class="mobile-header-control level-elements">
 
-		<li class="search-toggle-menu-item"><button class="mobile-menu-button main-btn" aria-controls="primary-menu" aria-expanded="false"><i class="fal fa-align-left"></i></button></li>
+		<li class="search-toggle-menu-item"><button class="mobile-menu-button main-btn"><i class="fal fa-align-left"></i></button></li>
 		<li class="search-toggle-menu"><button href="#" class="search-toggle main-btn" title="<?php _e( 'Show the search field', 'schoolsUOL' ); ?>"><i class="fas fa-search"></i></button></li>
 
 	</ul>

@@ -201,12 +201,12 @@ require get_template_directory() . '/inc/functions-acf.php';
 
 	echo('<ul class="university-links">');
 
-	 	echo('<li><a href="' . $sccessibility. '" rel="Accessibility">' . 'Accessibility'. '</a></li>');
-	 	echo('<li><a href="' . $contacting. '" rel="Contacting the University">' . 'Contacting the University'. '</a></li>');
-	 	echo('<li><a href="' . $legal. '" rel="Legal">' . 'Legal'. '</a></li>');
-	 	echo('<li><a href="' . $privacy. '" rel="Privacy">' . 'Privacy'. '</a></li>');
-	 	echo('<li><a href="' . $disclaimer. '" rel="Disclaimer">' . 'Disclaimer'. '</a></li>');
-	 	echo('<li><a href="' . $freedom. '" rel="Freedom of Information">' . 'Freedom of Information'. '</a></li>');
+	 	echo('<li><a href="' . $sccessibility. '>' . 'Accessibility'. '</a></li>');
+	 	echo('<li><a href="' . $contacting. '>' . 'Contacting the University'. '</a></li>');
+	 	echo('<li><a href="' . $legal. '>' . 'Legal'. '</a></li>');
+	 	echo('<li><a href="' . $privacy. '>' . 'Privacy'. '</a></li>');
+	 	echo('<li><a href="' . $disclaimer. '>' . 'Disclaimer'. '</a></li>');
+	 	echo('<li><a href="' . $freedom. '>' . 'Freedom of Information'. '</a></li>');
 
 	echo('</ul>');
 
