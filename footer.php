@@ -84,7 +84,7 @@
   <div class="footer-bottom">
 
     <div class="logo_container">
-      <a href="http://www.lincoln.ac.uk/home/" rel="<?php bloginfo( 'name' ); ?>">
+      <a href="http://www.lincoln.ac.uk/home/">
         <img class="logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/uol_landscape.svg" alt="<?php bloginfo( 'name' ); ?> University Of Lincoln Logo">
       </a>
 <div class="stacked">
