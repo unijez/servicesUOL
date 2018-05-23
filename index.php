@@ -60,5 +60,9 @@ $count = 1;
 
 				<?php endif;  wp_reset_query(); ?>
 
+			</div><!-- content-container -->
+
+	</main><!-- #main -->
+
 
 <?php get_footer(); ?>
