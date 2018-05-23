@@ -17,7 +17,7 @@
 		<div class="news-post_wrapper">
 
 			<div class="news-post_text">
-	    	<i class="calendar-icon fal fa-calendar-alt"></i><time class="news-post-date date-published" datetime="<?php the_time('d/m/Y') ?>"><?php the_time('F jS, Y') ?></time>
+	    	<i class="calendar-icon fal fa-calendar-alt"></i><span class="news-post-date date-published" content="<?php the_time('d/m/Y') ?>"><?php the_time('F jS, Y') ?></span>
 				<h1 class="post-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h1>
 				<p><?php excerpt(40);?></p>
 			</div> <!-- news-post_text -->

@@ -16,7 +16,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header clear searched-header">
 		<div class="icon-date">
-    	<i class="calendar-icon fal fa-calendar-alt"></i><time class="news-post-date date-published" content="<?php the_time('d/m/Y') ?>"><?php the_time('F jS, Y') ?></time>
+    	<i class="calendar-icon fal fa-calendar-alt"></i><span class="news-post-date date-published" content="<?php the_time('d/m/Y') ?>"><?php the_time('F jS, Y') ?></span>
 		</div>
 		<?php the_title( sprintf( '<h2 class="page-title__inner"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 	</header><!-- .entry-header -->

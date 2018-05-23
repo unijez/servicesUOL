@@ -12,7 +12,7 @@
   ?>
   <div class="overlay-slide">
     <div>
-      <h3 class="header-text-area"><i class="calendar-icon fal fa-calendar-alt"></i><time class="news-post-date date-published" content="<?php the_time('d/m/Y') ?>"><?php the_time('F jS, Y') ?></time></h3>
+      <h3 class="header-text-area"><i class="calendar-icon fal fa-calendar-alt"></i><span class="news-post-date date-published" content="<?php the_time('d/m/Y') ?>"><?php the_time('F jS, Y') ?></span></h3>
       <a href="<?php the_permalink() ?>">
         <h2 class="header-text-area"><?php the_title(); ?></h2>
       </a>
@@ -23,7 +23,7 @@
 <?php else: ?>
 
   <div class="title-container maximum-width-title">
-    <i class="calendar-icon fal fa-calendar-alt"></i><time class="news-post-date date-published" content="<?php the_time('d/m/Y') ?>"><?php the_time('jS F, Y') ?></time>
+    <i class="calendar-icon fal fa-calendar-alt"></i><span class="news-post-date date-published" content="<?php the_time('d/m/Y') ?>"><?php the_time('jS F, Y') ?></span>
     <?php the_title( '<h1 class="page-title__inner posted">', '</h1>' ); ?>
   </div>
 
