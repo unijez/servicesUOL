@@ -201,12 +201,12 @@ require get_template_directory() . '/inc/functions-acf.php';
 
 	echo('<ul class="university-links">');
 
-	 	echo('<li><a href="' . $sccessibility. '>' . 'Accessibility'. '</a></li>');
-	 	echo('<li><a href="' . $contacting. '>' . 'Contacting the University'. '</a></li>');
-	 	echo('<li><a href="' . $legal. '>' . 'Legal'. '</a></li>');
-	 	echo('<li><a href="' . $privacy. '>' . 'Privacy'. '</a></li>');
-	 	echo('<li><a href="' . $disclaimer. '>' . 'Disclaimer'. '</a></li>');
-	 	echo('<li><a href="' . $freedom. '>' . 'Freedom of Information'. '</a></li>');
+	 	echo('<li><a href="' . $sccessibility. '">' . 'Accessibility'. '</a></li>');
+	 	echo('<li><a href="' . $contacting. '">' . 'Contacting the University'. '</a></li>');
+	 	echo('<li><a href="' . $legal. '">' . 'Legal'. '</a></li>');
+	 	echo('<li><a href="' . $privacy. '">' . 'Privacy'. '</a></li>');
+	 	echo('<li><a href="' . $disclaimer. '">' . 'Disclaimer'. '</a></li>');
+	 	echo('<li><a href="' . $freedom. '">' . 'Freedom of Information'. '</a></li>');
 
 	echo('</ul>');
 
@@ -226,5 +226,3 @@ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 	__FILE__, //Full path to the main plugin file or functions.php.
 	'servicesBlog'
 );
-
-
