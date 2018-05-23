@@ -211,3 +211,20 @@ require get_template_directory() . '/inc/functions-acf.php';
 	echo('</ul>');
 
  };
+
+
+
+
+
+
+/**
+ * Load Theme Update file.
+ */
+require get_template_directory() .  '/plugin-update-checker/plugin-update-checker.php';
+$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+	'https://wordpress.uat.lincoln.ac.uk/themes/servicesBlog/servicesBlog-theme-update.json',
+	__FILE__, //Full path to the main plugin file or functions.php.
+	'servicesBlog'
+);
+
+
