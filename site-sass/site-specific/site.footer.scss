@@ -156,7 +156,7 @@
   li {
     float: left;
     display: inline-block;
-    margin-right: 48px;
+    margin-right: 24px;
     @include mq($until:tablet) {
       margin-right: 10px;
     }
