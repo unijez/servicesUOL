@@ -50,7 +50,9 @@ get_header(); ?>
 
 						<div class="about-wrapper_img">
 
-							<?php ?>
+							<?php
+							$frontpage_id = get_option( 'page_on_front' );
+							echo get_the_post_thumbnail($frontpage_id, 'small'); ?>
 						</div><!-- about-wrapper_img -->
 
 					</div><!-- about-wrapper -->
