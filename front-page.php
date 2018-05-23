@@ -29,23 +29,10 @@ get_header(); ?>
 					<div class="about-wrapper">
 
 						<div class="about-wrapper_text">
-							<h1 class="about-wrapper_heading">Welcome <br>to the <?php bloginfo( 'name' ); ?> website</h1>
+							<h1 class="about-wrapper_heading"><?php echo get_field('front_page_title'); ?></h1>
 							<div class="about-wrapper_excerpt">
-								<?php excerpt(30); ?>
-
-								<?php
-	    					query_posts(get_option('page_on_front'));
-	    						while ( have_posts() ) : the_post()
-								?>
-	    					<?php //excerpt(15) ?>
-
-								<?php
-	    						endwhile;
-	    					wp_reset_query();
-							?>
+								<?php echo get_field('front_page_message'); ?>
 							</div>
-							<h3>Want to know more?</h3>
-							<p class="about-link">Feel free to head over to <a href="<?php the_permalink( $post = 143 ); ?>">About Us</a>.</p>
 						</div><!-- about-wrapper_text -->
 
 						<div class="about-wrapper_img">

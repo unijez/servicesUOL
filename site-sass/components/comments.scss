@@ -10,8 +10,16 @@
   }
 
   //Remove labels
-  label {
+  p:not(.comment-form-cookies-consent) label {
     display: none;
+  }
+
+  .comment-form-cookies-consent label {
+    font-size: 16px;
+    line-height: 25px;
+    font-family: Helvetica;
+    color: #707070;
+    font-weight: 300;
   }
 
   //Change the placeholder values of the form
@@ -20,6 +28,7 @@
     font-family: Helvetica;
     color: $dark-grey;
     opacity: 1;
+
   }
 
   p {
@@ -35,6 +44,7 @@
     background-color: $footer-middle-grey;
     border: none;
     padding: 20px;
+    font-family: Helvetica;
   }
 
   .comment-form-url {
