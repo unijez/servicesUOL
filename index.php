@@ -19,6 +19,7 @@
 get_header();
 $count = 1;
 ?>
+<div>
 	<main id="main" class="site-main">
 
 		<?php if ( have_posts() ) : ?>
@@ -58,5 +59,6 @@ $count = 1;
 				) ); ?>
 
 				<?php endif;  wp_reset_query(); ?>
-<div>
+		</main>
+
 <?php get_footer(); ?>
