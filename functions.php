@@ -179,3 +179,35 @@ require get_template_directory() . '/inc/template-functions.php';
  * Implement ACF.
  */
 require get_template_directory() . '/inc/functions-acf.php';
+
+
+/**
+ * University Footer Credits
+ *
+ * @since  1.0.0
+ * @access public
+ * @return void
+ */
+
+
+ function university_links() {
+
+ 	$sccessibility = esc_url('lincoln.ac.uk/home/abouttheuniversity/accessibility/' );
+ 	$contacting = esc_url('lincoln.ac.uk/home/contactus/' );
+ 	$legal = esc_url('lincoln.ac.uk/home/abouttheuniversity/governance/universitypolicies/' );
+ 	$privacy = esc_url('lincoln.ac.uk/home/abouttheuniversity/governance/universitypolicies/websiteandpublicationsinformationliability/' );
+ 	$disclaimer = esc_url('lincoln.ac.uk/home/abouttheuniversity/governance/universitypolicies/websiteandpublicationsinformationliability/' );
+ 	$freedom = esc_url('secretariat.blogs.lincoln.ac.uk/information-compliance/freedom-of-information/' );
+
+	echo('<ul class="university-links">');
+
+	 	echo('<li><a href="' . $sccessibility. '" rel="Accessibility">' . 'Accessibility'. '</a></li>');
+	 	echo('<li><a href="' . $contacting. '" rel="Contacting the University">' . 'Contacting the University'. '</a></li>');
+	 	echo('<li><a href="' . $legal. '" rel="Legal">' . 'Legal'. '</a></li>');
+	 	echo('<li><a href="' . $privacy. '" rel="Privacy">' . 'Privacy'. '</a></li>');
+	 	echo('<li><a href="' . $disclaimer. '" rel="Disclaimer">' . 'Disclaimer'. '</a></li>');
+	 	echo('<li><a href="' . $freedom. '" rel="Freedom of Information">' . 'Freedom of Information'. '</a></li>');
+
+	echo('</ul>');
+
+ };

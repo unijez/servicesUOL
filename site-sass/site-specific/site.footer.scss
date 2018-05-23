@@ -106,7 +106,7 @@
 
 .logo_container {
   display: flex;
-  width: 70%;
+  width: 80%;
   @include mq ($until:tablet) {
     flex-direction: column;
     width: 100%;
@@ -132,7 +132,7 @@
 }
 
 .coppyright {
-  margin-top: 47px;
+  margin-top: 16px;
   float: left;
   font-family: Helvetica;
   font-size: 12px;
@@ -140,5 +140,30 @@
     text-align: center;
     margin: 0;
     padding: 10px 0;
+  }
+}
+
+.stacked {
+  margin-top: 5px;
+}
+
+.university-links{
+  margin-left: 30px;
+  width: 100%;
+  @include mq($until:tablet) {
+    margin-left: 0;
+  }
+  li {
+    float: left;
+    display: inline-block;
+    margin-right: 48px;
+    @include mq($until:tablet) {
+      margin-right: 10px;
+    }
+    a {
+      font-family: Helvetica;
+      font-size: 12px;
+      color: #047E8B;
+    }
   }
 }
