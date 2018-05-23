@@ -103,7 +103,7 @@
 	<ul class="mobile-header-control level-elements">
 
 		<li class="search-toggle-menu-item"><button class="mobile-menu-button main-btn"><i class="fal fa-align-left"></i></button></li>
-		<li class="search-toggle-menu"><button href="#" class="search-toggle main-btn" title="<?php _e( 'Show the search field', 'schoolsUOL' ); ?>"><i class="fas fa-search"></i></button></li>
+		<li class="search-toggle-menu"><button class="search-toggle main-btn" title="<?php _e( 'Show the search field', 'schoolsUOL' ); ?>"><i class="fas fa-search"></i></button></li>
 
 	</ul>
 	<nav class="mobile-navigation hide">
