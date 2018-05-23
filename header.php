@@ -89,7 +89,7 @@
 				?>
 			</ul>
 
-			<li class="search-toggle-menu"><button class="search-toggle main-btn" title="<?php _e( 'Show the search field', 'ServicesUOL' ); ?>"><i class="fas fa-search"></i></button></li>
+			<span class="search-toggle-menu"><button class="search-toggle main-btn" title="<?php _e( 'Show the search field', 'ServicesUOL' ); ?>"><i class="fas fa-search"></i></button></span>
 
 		</nav><!-- #site-navigation -->
 
