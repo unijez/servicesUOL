@@ -14,12 +14,19 @@
     display: none;
   }
 
-  .comment-form-cookies-consent label {
-    font-size: 16px;
-    line-height: 25px;
-    font-family: Helvetica;
-    color: #707070;
-    font-weight: 300;
+  .comment-form-cookies-consent {
+    label {
+      font-size: 16px;
+      line-height: 25px;
+      font-family: Helvetica;
+      color: #707070;
+      font-weight: 300;
+    }
+    input {
+      width: 17px !important;
+      height: 17px;
+      margin-right: 30px;
+    }
   }
 
   //Change the placeholder values of the form
