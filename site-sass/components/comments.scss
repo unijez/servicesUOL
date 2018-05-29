@@ -100,8 +100,8 @@
 
 
   //Commenter icon
-  .comment-author {
-    img {
+  .comment {
+    .avatar {
       height: 70px;
       width: 70px;
       border-radius: 35px;
@@ -139,14 +139,14 @@
   }
 }
 
-.comment-author ul li cite {
+.comment-author cite {
   font-style: normal;
   font-size: 25px;
   color: $dark-grey;
 }
 
 //Comment stylings
-.comment-author ul {
+.comment-header {
   padding-top: 15px;
   margin-left: 100px;
 
@@ -155,12 +155,12 @@
   }
 
 
-  li:first-child cite a{
+  .comment-header cite a{
     color: $dark-grey;
     font-size: 20px;
   }
 
-  li:last-child div a{
+  .comment-header a{
     color: $light-grey;
   }
 
