@@ -34,6 +34,8 @@
           $background_image = "";
           $backup_slide = true;
         }
+      else:
+        $backup_slide = true;
       endif;
       ?>
       <div class="slick-slide heading-image" style="background-image: url(<?php echo $background_image; ?>)">
