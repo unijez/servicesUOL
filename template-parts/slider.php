@@ -29,38 +29,30 @@
 
         if($imgwidth >= $wanted_width) {
           $background_image = get_the_post_thumbnail_url($post->ID);
-          $backup_slide = false;
         } else {
           $background_image = "";
-          $backup_slide = true;
         }
-      else:
-        $backup_slide = true;
       endif;
       ?>
-      <div class="slick-slide heading-image" style="background-image: url(<?php echo $background_image; ?>)">
-        <?php get_image_result(header_post_image()); ?>
-        <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title() ?></a>
-        <!-- If the post didn't have a thumbnail / featured image, create the backup slide -->
-        <?php if($backup_slide == true): ?>
-          <div class="backup-slide"></div>
-        <?php endif; ?>
-        <div class="overlay-slide">
-          <div>
-            <h5 class="header-text-area">
-              <i class="calendar-icon fal fa-calendar-alt"></i><?php echo get_the_date(); ?>
-            </h5>
-            <a href="<?php the_permalink() ?>">
-              <?php $maxLen = get_field("maximum_length", "option"); ?>
-              <h2 class="header-text-area"><?php the_title(); ?></h2>
-            </a>
+        <div class="slick-slide heading-image backup-slide" <?php if ($background_image != ""): ?>style="background-image: url(<?php echo $background_image; ?>)" <?php endif; ?>>
+          <?php get_image_result(header_post_image()); ?>
+          <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title() ?></a>
+          <!-- If the post didn't have a thumbnail / featured image, create the backup slide -->
+          <div class="overlay-slide">
             <div>
-                <a href="<?php the_permalink()?>" class="header-text-area">Read More</a>
-            </div> <!-- author -->
+              <h5 class="header-text-area">
+                <i class="calendar-icon fal fa-calendar-alt"></i><?php echo get_the_date(); ?>
+              </h5>
+              <a href="<?php the_permalink() ?>">
+                <?php $maxLen = get_field("maximum_length", "option"); ?>
+                <h2 class="header-text-area"><?php the_title(); ?></h2>
+              </a>
+              <div>
+                  <a href="<?php the_permalink()?>" class="header-text-area">Read More</a>
+              </div> <!-- author -->
+            </div>
           </div>
         </div>
-
-      </div>
       <?php
       endwhile;
       wp_reset_query();
