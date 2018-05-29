@@ -191,11 +191,11 @@ if ( ! function_exists( 'ServicesUOL_comment' ) ) {
 			case 'pingback' :
 			case 'trackback' :
 		?>
-		
+
 		<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
-		
+
 			<?php __( 'Pingback:', 'ServicesUOL' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( '(Edit)', 'ServicesUOL' ), '<span class="edit-link">', '</span>' ); ?>
-			
+
 		</li>
 		<?php
 				break;
@@ -203,55 +203,55 @@ if ( ! function_exists( 'ServicesUOL_comment' ) ) {
 			global $post;
 		?>
 		<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
-		
+
 			<div id="comment-<?php comment_ID(); ?>" class="comment">
-			
+
 				<?php echo get_avatar( $comment, 80 ); ?>
-			
+
 				<div class="comment-inner">
 
 					<div class="comment-header comment-meta">
-												
+
 						<?php printf( '<cite class="fn">%1$s</cite>',
 							get_comment_author_link()
 						); ?>
-						
+						<i class="calendar-icon fal fa-calendar-alt"></i>
 						<p><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf(  _x( '%s at %s', '[date] at [time of day]', 'ServicesUOL' ), get_comment_date(), get_comment_time() ); ?></a></p>
-						
+
 						<div class="comment-actions comment-meta">
-						
+
 							<?php edit_comment_link( __( 'Edit', 'ServicesUOL' ), '', '' ); ?>
-							
+
 							<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply', 'ServicesUOL' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
-							
+
 							<div class="clear"></div>
-						
+
 						</div><!-- .comment-actions -->
-						
+
 					</div><!-- .comment-header -->
 
 					<div class="comment__content">
-					
+
 						<?php if ( '0' == $comment->comment_approved ) : ?>
-						
+
 							<p class="comment-awaiting-moderation"><?php _e( 'Awaiting moderation', 'ServicesUOL' ); ?></p>
-							
+
 						<?php endif; ?>
-					
+
 						<?php comment_text(); ?>
-						
+
 					</div><!-- .comment-content -->
-					
+
 					<div class="comment-actions-below hidden">
-						
+
 						<?php edit_comment_link( __( 'Edit', 'ServicesUOL' ), '', '' ); ?>
-						
+
 						<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply', 'ServicesUOL' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
-						
+
 						<div class="clear"></div>
-					
+
 					</div><!-- .comment-actions -->
-					
+
 				</div><!-- .comment-inner -->
 
 			</div><!-- .comment-## -->
