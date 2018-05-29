@@ -87,17 +87,16 @@
       <a href="http://www.lincoln.ac.uk/home/">
         <img class="logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/uol_landscape.svg" alt="<?php bloginfo( 'name' ); ?> University Of Lincoln Logo">
       </a>
-<div class="stacked">
-      <p class="credit">
+      <div class="stacked">
+        <p class="credit">
 
-        Designed by <b>Thomas Moore</b> (2nd year Interactive Design). Developed by <b>Brennan Ceballos Peña</b> (1st year Games Computing)
-      </p>
-      <?php university_links(); ?>
+          Designed by <b>Thomas Moore</b> (2nd year Interactive Design). Developed by <b>Brennan Ceballos Peña</b> (1st year Games Computing)
+        </p>
+        <?php university_links(); ?>
 
-</div>
+      </div>
+      <p class="coppyright">	&#169; <b>University of Lincoln.</b> All rights reserved</p>
     </div>
-
-    <p class="coppyright">	&#169; <b>University of Lincoln.</b> All rights reserved</p>
 
   </div> <!-- footer-bottom -->
 

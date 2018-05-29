@@ -106,10 +106,14 @@
 
 .logo_container {
   display: flex;
-  width: 80%;
-  @include mq ($until:tablet) {
-    flex-direction: column;
-    width: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include mq (desktop) {
+    flex-direction: row;
   }
 }
 
@@ -120,7 +124,6 @@
 }
 
 .credit {
-  margin: 32px 0 0 30px;
   display: inline;
   font-family: Helvetica;
   font-size: 12px;
@@ -132,10 +135,14 @@
 }
 
 .coppyright {
+  display: inline-block;
   margin-top: 16px;
   float: left;
   font-family: Helvetica;
   font-size: 12px;
+  @include mq(desktop) {
+    align-self: flex-end;
+  }
   @include mq ($until:tablet) {
     text-align: center;
     margin: 0;
@@ -144,15 +151,32 @@
 }
 
 .stacked {
-  margin-top: 5px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-between;
+
+  margin: 10px 20px;
+  height: 43px;
+
+  @include mq(desktop) {
+    margin: 0 20px;
+  }
+
+  @include mq($until:tablet) {
+    height: auto;
+  }
 }
+
 
 .university-links{
   list-style: none;
-  margin-left: 30px;
-  width: 100%;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
   @include mq($until:tablet) {
     margin-left: 0;
+    flex-direction: column;
   }
   li {
     float: left;
@@ -175,5 +199,8 @@
   li:not(:last-child) {
     padding-right: 12px;
     border-right: solid black 1px;
+    @include mq($until:tablet) {
+      border: 0px;
+    }
   }
 }
