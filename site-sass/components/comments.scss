@@ -101,6 +101,9 @@
 
   //Commenter icon
   div.comment {
+    font-family: Helvetica;
+    color: $main-text-grey;
+
     img {
       height: 70px;
       width: 70px;
@@ -145,6 +148,16 @@
             background-color: $main-text-grey;
         }
 
+        a {
+          font-family: Helvetica;
+          color: $main-text-grey;
+        }
+
+        .calendar-icon {
+          float: left;
+          margin-top: 1.5px;
+        }
+
       }
     }
 
@@ -154,10 +167,10 @@
   }
 }
 
-.comment-author cite {
+cite.fn, cite.fn a {
   font-style: normal;
   font-size: 25px;
-  color: $dark-grey;
+  color: $dark-grey !important;
 }
 
 //Comment stylings
@@ -248,6 +261,6 @@
 }
 
 .comment__content {
-  margin-left: 100px;
+  margin-top: 25px;
   line-height: 25px;
 }
