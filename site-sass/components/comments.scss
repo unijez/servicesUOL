@@ -86,6 +86,7 @@
     padding: 20px;
     color: white;
     margin:  0 auto;
+    cursor: pointer;
 
     @include mq($until:tablet) {
       width: auto;
@@ -224,6 +225,21 @@ cite.fn, cite.fn a {
 .comment {
   div {
     max-width: 100vw;
+  }
+}
+
+.fleft {
+  margin: 0;
+}
+
+.fright {
+  margin-bottom: 80px;
+
+  a {
+    text-decoration: none;
+    font-family: Georgia;
+    font-weight: 300;
+    color: #00325f;
   }
 }
 
