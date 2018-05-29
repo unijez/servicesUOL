@@ -13,6 +13,8 @@
   p:not(.comment-form-cookies-consent) label {
     display: none;
   }
+	
+	
 
   .comment-form-cookies-consent {
     label {
@@ -28,6 +30,15 @@
       margin-right: 30px;
     }
   }
+
+
+#itsec-recaptcha-opt-in p {
+	font-size: 16px;
+	line-height: 25px;
+	font-family: Helvetica;
+	color: #707070;
+	font-weight: 300;
+}
 
   //Change the placeholder values of the form
   .comment-form-comment textarea::placeholder,
