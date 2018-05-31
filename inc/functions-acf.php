@@ -73,7 +73,7 @@ if( function_exists('acf_add_local_field_group') ):
 	require get_template_directory() . '/inc/acfs/social-media-text-acf.php';
 
 	//Releated Link Boxes
-	require get_template_directory() . '/inc/acfs/releated-posts-acf.php';
+	//	require get_template_directory() . '/inc/acfs/releated-posts-acf.php';
 
 	//Post/Page Description
 	require get_template_directory() . '/inc/acfs/postpage-description-acf.php';
