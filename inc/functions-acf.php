@@ -91,4 +91,6 @@ if( function_exists('acf_add_local_field_group') ):
 
 	require get_template_directory() . '/inc/acfs/latest-news-acf.php';
 
+	require get_template_directory() . '/inc/acfs/front-page-welcome-acf.php';
+
 endif;
