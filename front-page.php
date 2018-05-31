@@ -93,7 +93,7 @@ get_header(); ?>
 					</div><!-- news-wrapper -->
 					<?php endif; ?>
 
-
+					<?php if(get_field('content_social_media')): ?>
 					<h1 class="content-heading">Social Media</h1><i class="far fa-angle-down"></i>
 					<div class="social-wrapper">
 
@@ -109,7 +109,7 @@ get_header(); ?>
 
 
 				</div><!-- font-page_container -->
-
+				<?php endif; ?>
 
 
 	</main><!-- #main -->
