@@ -40,11 +40,9 @@
           <!-- If the post didn't have a thumbnail / featured image, create the backup slide -->
           <div class="overlay-slide">
             <div>
-              <?php if(is_single()): ?>
               <h5 class="header-text-area">
                 <i class="calendar-icon fal fa-calendar-alt"></i><?php echo get_the_date(); ?>
               </h5>
-              <?php endif; ?>
               <a href="<?php the_permalink() ?>">
                 <?php $maxLen = get_field("maximum_length", "option"); ?>
                 <h2 class="header-text-area"><?php the_title(); ?></h2>

@@ -6,7 +6,7 @@ acf_add_local_field_group(array(
 	'fields' => array(
 		array(
 			'key' => 'field_5acc89ea833b7',
-			'label' => 'Post/Page Description',
+			'label' => 'Post/Page Description for the extended navigation',
 			'name' => 'postpage_description',
 			'type' => 'text',
 			'instructions' => '',
@@ -18,7 +18,7 @@ acf_add_local_field_group(array(
 				'id' => '',
 			),
 			'default_value' => '',
-			'placeholder' => 'Please enter the description of the post/page.',
+			'placeholder' => 'Please enter the description of the post/page for the extended navigation.',
 			'prepend' => '',
 			'append' => '',
 			'maxlength' => 90,
@@ -40,7 +40,7 @@ acf_add_local_field_group(array(
 			),
 		),
 	),
-	'menu_order' => 0,
+	'menu_order' => 3,
 	'position' => 'normal',
 	'style' => 'default',
 	'label_placement' => 'top',
