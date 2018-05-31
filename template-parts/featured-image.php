@@ -26,7 +26,9 @@ PHP to create the featured image on pages and posts
 <?php else: ?>
 
   <div class="title-container maximum-width-title">
+    <?php if(is_single()): ?>
     <i class="calendar-icon fal fa-calendar-alt"></i><span class="news-post-date date-published" content="<?php the_time('d/m/Y') ?>"><?php the_time('jS F, Y') ?></span>
+    <?php endif; ?>
     <?php the_title( '<h1 class="page-title__inner posted">', '</h1>' ); ?>
   </div>
 
