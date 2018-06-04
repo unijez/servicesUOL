@@ -32,7 +32,7 @@ acf_add_local_field_group(array(
 			'elements' => array(
 				0 => 'featured_image',
 			),
-			'min' => 3,
+			'min' => 0,
 			'max' => 6,
 			'return_format' => 'object',
 		),
