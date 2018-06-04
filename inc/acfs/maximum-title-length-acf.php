@@ -17,7 +17,7 @@ acf_add_local_field_group(array(
 				'class' => '',
 				'id' => '',
 			),
-			'default_value' => '',
+			'default_value' => 200,
 			'placeholder' => '',
 			'prepend' => '',
 			'append' => '',
