@@ -23,6 +23,25 @@ acf_add_local_field_group(array(
 			'append' => '',
 			'maxlength' => 120,
 		),
+		array(
+			'key' => 'field_5b0fc23c288e6',
+			'label' => 'Content Social Media',
+			'name' => 'content_social_media',
+			'type' => 'true_false',
+			'instructions' => 'Check / uncheck the tick box to enable / disable the appearance of the social media area within the content.',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => '',
+			'default_value' => 0,
+			'ui' => 0,
+			'ui_on_text' => '',
+			'ui_off_text' => '',
+		),
 	),
 	'location' => array(
 	        array(
