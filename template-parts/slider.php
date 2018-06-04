@@ -29,9 +29,11 @@
 
         if($imgwidth >= $wanted_width) {
           $background_image = get_the_post_thumbnail_url($post->ID);
-        } else {
-          $background_image = "";
         }
+      endif;
+
+      if(!has_post_thumbnail()):
+        $background_image = "";
       endif;
       ?>
         <div class="slick-slide heading-image backup-slide" <?php if ($background_image != ""): ?>style="background-image: url(<?php echo $background_image; ?>)" <?php endif; ?>>
