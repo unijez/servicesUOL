@@ -117,6 +117,20 @@
   }
 }
 
+.footer-bottom .logo_container {
+  display: flex;
+  width: 100%;
+  /*align-items: center;*/
+  /*justify-content: center;*/
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include mq (wide) {
+    flex-direction: row;
+  }
+}
+
+
 .logo_container a {
   @include mq ($until:tablet) {
     /*margin: 0 auto;*/
@@ -142,7 +156,7 @@
   font-family: Helvetica;
   font-size: 12px;
   text-align: left;
-  @include mq(desktop) {
+  @include mq(wide) {
     align-self: flex-end;
   }
   @include mq ($until:tablet) {
@@ -161,7 +175,7 @@
   margin: 10px 0;
   height: 43px;
 
-  @include mq(desktop) {
+  @include mq(wide) {
     margin: 0 20px;
   }
 
@@ -175,7 +189,7 @@
   list-style: none;
   display: inline-flex;
   flex-direction: row;
-  justify-content: center;
+  /*justify-content: center;*/
   margin: 0;
   @include mq($until:tablet) {
     margin-left: 0;
