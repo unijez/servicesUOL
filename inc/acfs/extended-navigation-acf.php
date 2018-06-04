@@ -38,14 +38,22 @@ acf_add_local_field_group(array(
 		),
 	),
 	'location' => array(
-		array(
 			array(
-				'param' => 'page_type',
-				'operator' => '==',
-				'value' => 'front_page',
+				array(
+					'param' => 'page_type',
+					'operator' => '==',
+					'value' => 'front_page',
+				),
+			),
+			array(
+				array(
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'page',
+				),
 			),
 		),
-	),
+	
 	'menu_order' => 2,
 	'position' => 'normal',
 	'style' => 'default',
