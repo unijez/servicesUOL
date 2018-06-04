@@ -15,7 +15,15 @@ if(has_post_thumbnail()):
       <!-- Check the image size -->
       <div class="overlay-slide">
         <div>
+		  
+		  <?php if ( !is_page() ){ //Show Date on all but pages?>
+		  	
+		  
           <h3 class="header-text-area"><i class="calendar-icon fal fa-calendar-alt"></i><span class="news-post-date date-published" content="<?php the_time('d/m/Y') ?>"><?php the_time('F jS, Y') ?></span></h3>
+		  
+		  
+		   <?php } ?>
+		  
           <a href="<?php the_permalink() ?>">
             <h2 class="header-text-area"><?php the_title(); ?></h2>
           </a>
