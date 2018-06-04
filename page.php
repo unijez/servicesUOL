@@ -35,11 +35,33 @@ get_header(); ?>
 					                  <?php  comments_template(); ?>
 
 				                	</div> <!-- comments-container -->
+							 <?php endif; ?>
+							 
+							 
+					<div class="extended-navigation_wrapper">
+								
+						<?php $extended_navigation = get_field( 'extended_navigation' ); ?>
+						<?php if ( $extended_navigation ): ?>
+							<?php foreach ( $extended_navigation as $post ):  ?>
+								<?php setup_postdata ( $post ); ?>
 
-          </div>
+								<div class="extended-navigation_item">
+									<a class="extended-navigation_link" href="<?php the_permalink(); ?>"><?php the_title(); ?><i class="far fa-angle-right"></i></a>
+									<div class="extended-navigation_description">
+										<?php the_field( 'postpage_description' ); ?>
+									</div>
+								</div><!-- extended-navigation_item -->
 
-				              <?php endif; ?>
+							<?php endforeach; ?>
+							<?php wp_reset_postdata(); ?>
+						<?php endif; ?>
 
+					</div><!-- extended-navigation_wrapper -->		 
+							 
+          </div> <!--content-container-->
+
+				             
+							 
 
  					<?php endwhile; ?>
 
