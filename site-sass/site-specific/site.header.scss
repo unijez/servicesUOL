@@ -54,7 +54,7 @@ header {
 	align-self: center;
 	width: 230px;
 	@include mq($until:tablet) {
-		margin: 0 auto;
+		/*margin: 0 auto;*/
 		padding: 10px 0;
 	}
 }
