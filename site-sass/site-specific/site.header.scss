@@ -39,11 +39,12 @@ header {
 }
 
 .site-branding {
-	max-width: 66%;
+	width: 66%;
 	height: 100px;
 	display: flex;
 	float: left;
 	@include mq($until:tablet) {
+		width: 100%;
 		flex-direction: column;
 		height: auto;
 		padding: 10px
