@@ -39,7 +39,7 @@ header {
 }
 
 .site-branding {
-	max-width: 500px;
+	max-width: 66%;
 	height: 100px;
 	display: flex;
 	float: left;
@@ -74,9 +74,10 @@ header {
 }
 
 .site-title {
+	max-width: 250px;
 	font-family: Georgia;
 	display: inline-block;
-	margin-left: 40px;
+	margin: 0 40px;
 	margin-bottom: 0;
 	width: auto;
 	line-height: 21px;
