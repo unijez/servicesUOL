@@ -19,7 +19,13 @@
 
     <div class="column">
 
-      <?php if( function_exists('acf_add_local_field_group') )	:?>
+      <?php if( function_exists('acf_add_local_field_group') )	:
+    
+      //Vars
+      $site_email = get_field("e-mail", "options");
+      $email_tracking = get_field("e-mail_tracking_link", "options");
+     
+      ?>
 
       <div class="widget-container widget_text">
           <h2 class="widget-title">Contact Us</h2>
@@ -27,7 +33,24 @@
           <div class="textwidget">
             <p><?php echo get_field("address", "options"); ?></p>
             <p><a href="tel:<?php echo str_replace(' ', '', get_field("telephone_number", "options"));?>"><?php echo sanitize_text_field(get_field("telephone_number", "options")); ?></a></p>
-            <p><a href="mailto:<?php echo get_field("e-mail", "options")?>"><?php echo sanitize_text_field(get_field("e-mail", "options")); ?></a></p>
+            <p>
+			
+			
+					<?php if( $email_tracking ): ?>
+					
+					<a href="mailto:<?php echo sanitize_text_field($email_tracking); ?>">
+					
+					<?php elseif( $site_email ): ?>
+					
+					<a href="mailto:<?php echo sanitize_text_field($site_email); ?>">
+			
+					
+					<?php endif; ?>
+				
+					<?php echo sanitize_text_field($site_email); ?></a>
+			</p>
+		
+		
           </div>
 
       </div>	 <!--column-->

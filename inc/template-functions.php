@@ -13,19 +13,19 @@
  register_nav_menu( 'main', 'Main Menu' );
 
 // Search Function
-function collegeBlog_search_form( $form ) {
-	$form =
-	'<form role="search" method="get" id="searchform" class="site-header__search--form" action="' . esc_url( home_url( '/' ) ). '" >
-		<div class="search-container">
-			<button type="submit" id="searchsubmit">
-				<i class="far fa-search"></i>
-			</button>
-		</div>
-	</form>';
-
-	return $form;
-}
-add_filter( 'get_search_form', 'collegeBlog_search_form', 100 );
+//function collegeBlog_search_form( $form ) {
+//	$form =
+//	'<form role="search" method="get" id="searchform" class="site-header__search--form" action="' . esc_url( home_url( '/' ) ). '" >
+//		<div class="search-container">
+//			<button type="submit" id="searchsubmit">
+//				<i class="far fa-search"></i>
+//			</button>
+//		</div>
+//	</form>';
+//
+//	return $form;
+//}
+//add_filter( 'get_search_form', 'collegeBlog_search_form', 100 );
 
 // DISABLE WORDPRESS COMMENTS JS
 function itsg_disable_comment_js(){
