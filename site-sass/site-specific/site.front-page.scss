@@ -66,6 +66,11 @@ div.no-pad {
   }
 }
 
+.about-wrapper_text.full-width {
+	 width: 100%;
+}
+
+
 .about-wrapper_text {
   order: 0;
   flex: 0 1 auto;
@@ -79,6 +84,7 @@ div.no-pad {
     width: 100%;
   }
 }
+
 
 .about-wrapper_heading {
   font-family: Georgia;

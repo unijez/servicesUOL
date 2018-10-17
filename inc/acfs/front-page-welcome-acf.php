@@ -19,7 +19,6 @@ acf_add_local_field_group(array(
 			),
 			'default_value' => 'Welcome to the UoL website',
 			'placeholder' => '',
-			'maxlength' => 40,
 			'rows' => '',
 			'new_lines' => 'br',
 		),

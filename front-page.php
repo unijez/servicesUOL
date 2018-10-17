@@ -28,19 +28,23 @@ get_header(); ?>
 
 					<div class="about-wrapper">
 
-						<div class="about-wrapper_text">
+						<div class="about-wrapper_text <?php if( ! has_post_thumbnail() ): ?>full-width<?php endif; ?>">
 							<h1 class="about-wrapper_heading"><?php echo get_field('front_page_title'); ?></h1>
 							<div class="about-wrapper_excerpt">
 								<?php echo get_field('front_page_message'); ?>
 							</div>
 						</div><!-- about-wrapper_text -->
-
+						
+						<?php if( has_post_thumbnail() ): ?>
+						
 						<div class="about-wrapper_img">
 
 							<?php
 							$frontpage_id = get_option( 'page_on_front' );
 							echo get_the_post_thumbnail($frontpage_id, 'small'); ?>
 						</div><!-- about-wrapper_img -->
+						
+						<?php endif; ?>
 
 					</div><!-- about-wrapper -->
 

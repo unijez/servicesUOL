@@ -44,7 +44,7 @@ if ( ! function_exists( 'ServicesUOL_setup' ) ) :
 
 		/* image resizing */
 		add_image_size( 'post-intro-image', 450, 300, true );
-		add_image_size( 'hero-header', 1915, 630, array( 'left', 'top' )  ); // Hard Crop Mode
+		add_image_size( 'hero-header', 1200, 630, array( 'left', 'top' )  ); // Hard Crop Mode
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
@@ -181,6 +181,33 @@ require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/functions-acf.php';
 
 
+/**
+ * Remove Page Editor Based on Template
+ *
+ * @since  1.0.0
+ * @access public
+ * @return void
+ */
+//function tutsplus_offset_main_query ( $query ) {
+//     if ( $query->is_author() && $query->is_main_query() ) {
+//         $query->set('posts_per_page', '3');
+//    }
+// }
+//add_action( 'pre_get_posts', 'tutsplus_offset_main_query' );
+//
+
+add_action( 'admin_head', 'hide_editor' );
+function hide_editor() {
+    $template_file = basename( get_page_template() );
+   
+//    if( in_array($template_file, ['page-business.php', 'page-personal.php','page-news.php','page-about.php','page-contact.php','page-accountants.php','page-careers-self.php'], TRUE) ) { // template
+//        remove_post_type_support('page', 'editor');
+//    }
+	if((int) get_option('page_on_front')==get_the_ID()){
+	        remove_post_type_support('page', 'editor'); //Hide front page
+	}
+    
+}
 
 
 
@@ -188,9 +215,15 @@ require get_template_directory() . '/inc/functions-acf.php';
 /**
  * Load Theme Update file.
  */
-require get_template_directory() .  '/inc/plugin-update-checker/plugin-update-checker.php';
-$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	'https://wordpress.uat.lincoln.ac.uk/themes/servicesBlog/servicesBlog-theme-update.json',
-	__FILE__, //Full path to the main plugin file or functions.php.
-	'servicesBlog'
-);
+if ( file_exists( get_template_directory() . '/inc/plugin-update-checker/plugin-update-checker.php' ) ) { 	
+
+	require get_template_directory() .  '/inc/plugin-update-checker/plugin-update-checker.php';
+	
+	$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+		'https://wordpress.uat.lincoln.ac.uk//wp-update-server/?action=get_metadata&slug=servicesUOL',
+		__FILE__, //Full path to the main plugin file or functions.php.
+		'schoolsUOL'
+	);
+	
+	
+}
