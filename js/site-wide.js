@@ -16,7 +16,7 @@ $(".search-toggle").on("click", function(){
 		arrows: false,
 		slidesToShow: 1,
 	  slidesToScroll: 1,
-	  autoplay: true,
+	  autoplay: false,
 	  autoplaySpeed: 2500
 	});
 

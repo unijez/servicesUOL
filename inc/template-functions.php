@@ -260,3 +260,16 @@ if ( ! function_exists( 'ServicesUOL_comment' ) ) {
 		endswitch;
 	}
 }
+
+
+//Add Instructions to Featured Image Box	
+   
+function ration_add_featured_image_html( $html ) {
+   
+   $html .= '<p><i>Image dimensions must be a minimum of, 1280x600.</i></p>';
+ 
+   return $html;
+  
+
+}
+add_filter( 'admin_post_thumbnail_html', 'ration_add_featured_image_html');

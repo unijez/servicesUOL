@@ -24,21 +24,24 @@
       if(has_post_thumbnail()):
 
         $imgdata = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'hero-header', false);
-        $imgwidth = $imgdata[1];
-        $wanted_width = 1280;
-
-        if($imgwidth >= $wanted_width) {
-          $background_image = get_the_post_thumbnail_url($post->ID);
+        
+        $imageWidth = $imgdata[1];
+        $imageHeight = $imgdata[2];
+   
+    
+        if(($imageWidth >= 1200) && ($imageHeight > 599) && has_post_thumbnail()) {
+          $background_image = get_the_post_thumbnail_url($posts	->ID);
+        } else {
+        	$background_image = "";
         }
-      endif;
-
-      if(!has_post_thumbnail()):
-        $background_image = "";
+    
+        
       endif;
       ?>
-        <div class="slick-slide heading-image backup-slide" <?php if ($background_image != ""): ?>style="background-image: url(<?php echo $background_image; ?>)" <?php endif; ?>>
-          <?php get_image_result(header_post_image()); ?>
-          <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title() ?></a>
+	  
+        <div class="slick-slide heading-image backup-slide" <?php if($background_image): ?>style="background-image: url(' <?php echo $background_image;  ?>')"<?php endif; ?>>
+		  
+<!--          <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"></a>-->
           <!-- If the post didn't have a thumbnail / featured image, create the backup slide -->
           <div class="overlay-slide">
             <div>
